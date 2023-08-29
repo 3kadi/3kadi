@@ -1,0 +1,2206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root> // Please close program before editing this document! In other case changes might be overwritten
+  <GENERAL><logFilePath>H:\_Dev\3kadi-master\Humar sistemi - Kontrola kadi\Log.txt</logFilePath> // TXT Log
+		<UserActionsFilePath>H:\_Dev\3kadi-master\Humar sistemi - Kontrola kadi\UserActions.csv</UserActionsFilePath> // CSV Log of user actions
+		<TemperatureLogFilePath>H:\_Dev\3kadi-master\Humar sistemi - Kontrola kadi\Temperature History.csv</TemperatureLogFilePath> // CSV Log of temperatures
+		<SarzaLogFolderPath>H:\_Dev\3kadi-master\Logs</SarzaLogFolderPath> //  Logi - Saržno orientirani
+		<SearchEngineRunScript>C:\Scripts_KontrolaKadi\Srch.bat</SearchEngineRunScript>//  Pot do skripta za zagon iskalnika
+		<WatchdogRetries>3</WatchdogRetries>							// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
+		<AutoConnect>True</AutoConnect>           						// autoconnect at startup
+		<GUIrefreshrate>800</GUIrefreshrate>							// program will force refresh values every ### miliseconds (small values can result in overloading CPU) NOTE: Program refreshes gui on every value change from PLC on its own!
+		<SettingsMenuRefreshrate>200</SettingsMenuRefreshrate>			// program will refresh values in settings form every ### miliseconds
+		<GeneratePC_WD>true</GeneratePC_WD>								// program will generate watchdog counter for PLC to check if PC is present on the network (value must be: "true" or "false")
+		<AddressPC_WD>W 278</AddressPC_WD>								// program will generate watchdog counter on specified profinet address (type is word; example/default value: "W 278")
+		<DisableGuiOnLostConnection>false</DisableGuiOnLostConnection>	// Disables Gui sub-Menus when connection is lost and prevents entry to sub-Menus
+		<LogPeriod_Sarza>1000</LogPeriod_Sarza>							// Določi na koliko časa se vpiše vzorec temperatur, ph vrednosti in ostalih podatkov v Log za saržo
+		<LogoffEnabled>true</LogoffEnabled>								// Omogoči delovanje programa brez prijavljenega uporabnika	
+		</GENERAL>//
+		//
+		<GUI1>//
+		<GuiName>Elox</GuiName>                         				// Ime za prikaz GUI    
+		<MaxHeightKad>200</MaxHeightKad>     							// največja dovoljena višina
+		<RatioPause>45</RatioPause>										// širina presledka do naslednje kadi relativna na višino kadi izražena v odstotkih (npr: 50) 			
+		<paintElavator>False</paintElavator>								// ali se uporablja prikaz dvigala na gui
+		<OutDatagridMaxWidth>150</OutDatagridMaxWidth>					// maksimalna širina prikazovalne tabele v glavnem meniju
+		<GuiBackgroundColor>-4210753</GuiBackgroundColor>				// argb type color	- Barva ozadja
+		<GuiControlsColor>-4144960</GuiControlsColor>					// argb type color - Barva gumbov in drugih kontrol	
+			<Kad1>//
+			<Name>R1</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>90</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>2</AlertTime1>							// Čas izteka štoparice	[s]		
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Razmaščevanje</Processname>			// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)			
+			<KadColor>-342487</KadColor>						// Barva kadi 
+			<NameColor>-5359616</NameColor>						// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4></GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			
+			
+			</Kad1>
+			//
+			<Kad2>//
+			<Name>L1</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Lug</Processname>						// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-10000537</KadColor>						// Barva kadi 
+			<NameColor>-16777216</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4></GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad2>
+			//
+			<Kad3>//
+			<Name>SS1</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje1</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744256</KadColor>						// Barva kadi 
+			<NameColor>-16777088</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad3>
+			//
+			<Kad4>//
+			<Name>D1</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>false</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Dekapiranje</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-1250304</KadColor>							// Barva kadi 
+			<NameColor>-10729983</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>2</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>3</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>4</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>5</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>6</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad4>
+			//
+			<Kad5>//
+			<Name>SS2</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje2</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744256</KadColor>						// Barva kadi 
+			<NameColor>-16777088</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad5>
+			//
+			<Kad6>//
+			<Name>E1</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>10</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>30</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Elektrolit1</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744384</KadColor>						// Barva kadi 
+			<NameColor>-15977460</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>150</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>2</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2></GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4></GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad6>
+			//
+			<Kad7>//
+			<Name>S1</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>1</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Siling</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-6467840</KadColor>						// Barva kadi 
+			<NameColor>-12247551</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pH 6 do 6,5</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad7>
+			//
+			<Kad8>//
+			<Name>SS3</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje3</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744256</KadColor>						// Barva kadi 
+			<NameColor>-16777088</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1></GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2></GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4></GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad8>
+			//
+			<Kad9>//
+			<Name>E2</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>20</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>30</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Elektrolit2</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744384</KadColor>						// Barva kadi 
+			<NameColor>-15977460</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>150</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>2</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2></GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4></GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad9>
+			//
+			<Kad10>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>150</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad10>
+			//
+			<Kad11>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad11>
+			//
+			<Kad12>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad12>
+			//
+			<Kad13>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad13>
+			//
+			<Kad14>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad14>
+			//
+			<Kad15>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad15>//
+			<Kad16>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>False</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje6</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -16744256 </KadColor>					// Barva kadi 
+			<NameColor> -16777088 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad16>
+			//			
+			<Kad17>// 
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>60</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Deokisdacija</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-32704</KadColor>						// Barva kadi 
+			<NameColor>-16777216</NameColor>						// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>4</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>5</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad17>
+			//		
+			<Kad18>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>False</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Rezerva1</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744384</KadColor>						// Barva kadi 
+			<NameColor>-16768000</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad18>
+			//
+			<Kad19>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>1</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Rezerva2</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-1</KadColor>					// Barva kadi 
+			<NameColor>-1</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>3</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>4</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad19>
+			//
+			<Kad20>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad20>
+			//
+			</GUI1>//
+			
+			<GUI2>//
+		<GuiName>Barve</GuiName>                         				// Ime za prikaz GUI    
+		<MaxHeightKad>200</MaxHeightKad>     							// največja dovoljena višina
+		<RatioPause>60</RatioPause>										// širina presledka do naslednje kadi relativna na višino kadi izražena v odstotkih (npr: 50) 	
+		<paintElavator>False</paintElavator>								// ali se uporablja prikaz dvigala na gui
+		<OutDatagridMaxWidth>200</OutDatagridMaxWidth>					// maksimalna širina prikazovalne tabele v glavnem meniju
+		<GuiBackgroundColor>-4210753</GuiBackgroundColor>				// argb type color	- Barva ozadja
+		<GuiControlsColor>-4144960</GuiControlsColor>					// argb type color - Barva gumbov in drugih kontrol	
+			<Kad1>//
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]		
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Razmaščevanje</Processname>			// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-342487</KadColor>						// Barva kadi 
+			<NameColor>-5359616</NameColor>						// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad1>
+			//
+			<Kad2>//
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Lug</Processname>						// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-10000537</KadColor>						// Barva kadi 
+			<NameColor>-16777216</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad2>
+			//
+			<Kad3>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje1</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744256</KadColor>						// Barva kadi 
+			<NameColor>-16777088</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad3>
+			//
+			<Kad4>//
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Dekapiranje</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-256</KadColor>							// Barva kadi 
+			<NameColor>-10729983</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad4>
+			//
+			<Kad5>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje2</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744256</KadColor>						// Barva kadi 
+			<NameColor>-16777088</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad5>
+			//
+			<Kad6>//
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Elektrolit1</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744384</KadColor>						// Barva kadi 
+			<NameColor>-15977460</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>150</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad6>
+			//
+			<Kad7>//
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Tesnenje 1</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-6467840</KadColor>						// Barva kadi 
+			<NameColor>-12247551</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad7>
+			//
+			<Kad8>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje 3</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744256</KadColor>						// Barva kadi 
+			<NameColor>-16777088</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad8>
+			//
+			<Kad9>//
+			<Name>XX</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Elektrolit2</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744384</KadColor>						// Barva kadi 
+			<NameColor>-15977460</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>150</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad9>
+			//
+			<Kad10>//
+			<Name>SS4</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>False</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje 4</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -16744256 </KadColor>					// Barva kadi 
+			<NameColor> -16777088 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad10>
+			//
+			<Kad11>//
+			<Name>S2</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>10</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>60</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>720</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Tesnenje 2</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-32704</KadColor>						// Barva kadi 
+			<NameColor>-16777216</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pH 5,8 do 6,2</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad11>
+			//	
+			<Kad12>//
+			<Name>S3</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>720</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Tesnenje 3</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-32704</KadColor>					// Barva kadi 
+			<NameColor>-16777216</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pH 5,8 do 6,2</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad12>
+			//
+			<Kad13>//
+			<Name>SS5</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>False</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spirnanje 5</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -16744256 </KadColor>					// Barva kadi 
+			<NameColor> -16777088 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1></GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2></GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4></GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5></GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6></GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad13>
+			//			
+			<Kad14>//
+			<Name>Č</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>10</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>70</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>1140</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Črna</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16777216</KadColor>							// Barva kadi 
+			<NameColor>-1</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>4</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>5</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad14>											
+			//		
+			<Kad15>//
+			<Name>HNL</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>600</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Siva</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-4144960</KadColor>						// Barva kadi 
+			<NameColor>-16777216</NameColor>							// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>					// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;			
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>4</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>5</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad15>//
+			<Kad16>//
+			<Name>SS6</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>False</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>					// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Spiranje6</Processname>				// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -16744256 </KadColor>					// Barva kadi 
+			<NameColor> -16777088 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad16>
+			//			
+			<Kad17>// 
+			<Name>HNO3</Name>										// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>60</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Deokisdacija</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-32704</KadColor>						// Barva kadi 
+			<NameColor>-16777216</NameColor>						// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>3</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>4</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>5</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad17>
+			//		
+			<Kad18>//
+			<Name>RES1</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>False</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>False</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>0</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>False</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Rezerva1</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-16744384</KadColor>						// Barva kadi 
+			<NameColor>-16768000</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>0</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>0</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>0</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3></OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>0</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4></OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad18>
+			//
+			<Kad19>//
+			<Name>RES2</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>1</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>Rezerva2</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor>-1</KadColor>					// Barva kadi 
+			<NameColor>-1</NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>3</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>4</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5></OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>0</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6></OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6></OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad19>
+			//
+			<Kad20>//
+			<Name>XX</Name>									// Ime kadi - napis na kadi
+			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
+			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
+			<ChartYto>80</ChartYto>								// Kje se konča Y os
+			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
+			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
+			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<Processname>ABCDEF</Processname>					// Ime procesa - napis v tabeli
+			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
+			<KadColor> -32704 </KadColor>						// Barva kadi 
+			<NameColor> -16777215 </NameColor>					// Barva Napisa na kadi 
+			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
+			<TypeOf_Kad>-1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine1>pre</OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine1>post</OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine2>1</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine2>pre</OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine2>post</OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine3>1</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>pre</OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine3>post</OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine4>1</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>pre</OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine4>post</OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine5>1</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine5>pre</OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine5>post</OutDatagridPostfixAtLine5>	// Nastavi besedilo po vrednosti
+			<GetTextAtLine6>1</GetTextAtLine6>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine6>pre</OutDatagridPrefixAtLine6>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<OutDatagridPostfixAtLine6>post</OutDatagridPostfixAtLine6>	// Nastavi besedilo po vrednosti
+			</Kad20>
+			//
+			</GUI2>//
+			
+	  <LOGO1>//
+		<show>true</show>							// indicates if tabpage is shown on GUI
+		<enabled>true</enabled>						// indicates if device is enabled - (gui, communication ...)
+		<showname>LOGO1</showname>					// Showname
+		<serverIP>192.168.10.201</serverIP>		// format must be ###.###.###.### (192.168.0.1) IP of PLC
+		<localTSAP>"03.00"</localTSAP>				// format must be ##.## (00.03) TSAP is used for comunication between PLCs 
+		<remoteTSAP>"02.00"</remoteTSAP>			// format must be ##.## (00.03) TSAP is used for comunication between PLCs
+		<watchdogEN>true</watchdogEN>				// value must be "true" or "false" .. enable or disable watchdog - watchdog is used for detecting comunication problems	
+		<watchdogAddress>DW 274</watchdogAddress>   // value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example DW 100 if watchdog value is Double Word on address 100)
+		<ReadWriteCycle>250</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
+	  </LOGO1>//
+	  //
+	  <LOGO2>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO2</showname>//
+		<serverIP>192.168.10.202</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 246</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO2>//
+	  //
+	  <LOGO3>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO3</showname>//
+		<serverIP>192.168.10.203</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 250</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO3>//
+	  //
+	  <LOGO4>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO4</showname>//
+		<serverIP>192.168.10.204</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 254</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO4>//
+	  //
+	  <LOGO5>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO5</showname>//
+		<serverIP>192.168.10.205</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 258</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO5>//
+	  //
+	  <LOGO6>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO6</showname>//
+		<serverIP>192.168.10.206</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 262</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO6>//
+	  //
+	  <LOGO7>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO7</showname>//
+		<serverIP>192.168.10.207</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 266</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO7>//
+	  //
+	  <LOGO8>//
+		<show>true</show>//
+		<enabled>true</enabled>//
+		<showname>LOGO8</showname>//
+		<serverIP>192.168.10.208</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 270</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO8>//
+	  //
+	  <LOGO9>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO9</showname>//
+		<serverIP>192.168.10.209</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>250</ReadWriteCycle>//
+		</LOGO9>//
+	  //
+	  <LOGO10>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO10</showname>//
+		<serverIP>192.168.10.210</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO10>//
+	  //
+	  <LOGO11>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO11</showname>//
+		<serverIP>192.168.10.211</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO11>//
+	  //
+	  <LOGO12>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO12</showname>//
+		<serverIP>192.168.10.212</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO12>//
+	  //
+	  <LOGO13>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO13</showname>//
+		<serverIP>192.168.10.213</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO13>//
+	  //
+	  <LOGO14>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO14</showname>//
+		<serverIP>192.168.10.214</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO14>//
+	  //
+	  <LOGO15>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO15</showname>//
+		<serverIP>192.168.10.215</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO15>//
+	  //
+	  <LOGO16>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO16</showname>//
+		<serverIP>192.168.010.216</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO16>//
+	  //
+	  <LOGO17>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO17</showname>//
+		<serverIP>192.168.10.217</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO17>//
+	  //
+	  <LOGO18>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO18</showname>//
+		<serverIP>192.168.10.218</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO18>//
+	  //
+	  <LOGO19>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO19</showname>//
+		<serverIP>192.168.10.219</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO19>//
+	  //
+	  <LOGO20>//
+		<show>false</show>//
+		<enabled>false</enabled>//
+		<showname>LOGO20</showname>//
+		<serverIP>192.168.10.220</serverIP>//
+		<localTSAP>"03.00"</localTSAP>//
+		<remoteTSAP>"02.00"</remoteTSAP>//
+		<watchdogEN>true</watchdogEN>//
+		<watchdogAddress>DW 38</watchdogAddress>//
+		<ReadWriteCycle>100</ReadWriteCycle>//
+		</LOGO20>//
+	  //
+	  //
+	  //
+	  <USERS>// Users paswords and permisions
+	  <User1>//
+		<Name>admin</Name> 	// Displayname for user
+		<Pwd>admin</Pwd> // Pasword for user
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>true</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>true</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>2864</ID> 		// ID for identification or quick login
+	  </User1>//
+	  //
+	  <User2>//
+		<Name>Šef</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>true</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>true</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>true</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>555</ID> 		//
+	  </User2>//
+	  //
+	  <User3>//
+		<Name>Anže Rozman</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>false</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>true</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>6827411</ID> 		//
+	  </User3>//
+	  //
+	  <User4>//
+		<Name>Klemen Zupin</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>false</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>true</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>6827599</ID> 		//
+	  </User4>//
+	  //
+	  <User5>//
+		<Name>Alen Japić</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>false</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1111</ID> 		//
+	  </User5>//
+	  //
+	  <User6>//
+		<Name>Marjan Jenkole</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>false</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>false</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>true</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>2222</ID> 		//
+	  </User6>//
+	  //
+	  <User7>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>3333</ID> 		//
+	  </User7>//
+	  //
+	  <User8>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>4444</ID> 		//
+	  </User8>//
+	  //
+	  <User9>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>5555</ID> 		//
+	  </User9>//
+	  //
+	  <User10>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1009</ID> 		//
+	  </User10>//
+	  //
+	  <User11>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1010</ID> 		//
+	  </User11>//
+	  //
+	  <User12>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1011</ID> 		//
+	  </User12>//
+	  //
+	  <User13>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1012</ID> 		//
+	  </User13>//
+	  //
+	  <User14>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1013</ID> 		//
+	  </User14>//
+	  //
+	  <User15>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1014</ID> 		//
+	  </User15>//
+	  //
+	  <User16>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1015</ID> 		//
+	  </User16>//
+	  //
+	  <User17>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1016</ID> 		//
+	  </User17>//
+	  //
+	  <User18>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1017</ID> 		//
+	  </User18>//
+	  //
+	  <User19>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1018</ID> 		//
+	  </User19>//
+	  //
+	  <User20>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>19</ID> 		//
+	  </User20>//
+	  //
+	  <User21>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1020</ID> 		//
+	  </User21>//
+	  //
+	  <User22>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1021</ID> 		//
+	  </User22>//
+	  //
+	  <User23>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1022</ID> 		//
+	  </User23>//
+	  //
+	  <User24>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1023</ID> 		//
+	  </User24>//
+	  //
+	  <User25>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1024</ID> 		//
+	  </User25>//
+	  //
+	  <User26>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1025</ID> 		//
+	  </User26>//
+	  //
+	  <User27>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1026</ID> 		//
+	  </User27>//
+	  //
+	  <User28>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1027</ID> 		//
+	  </User28>//
+	  //
+	  <User29>//
+		<Name>user</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>true</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>true</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>true</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>true</permission8> 	// Level of restriction: 
+		<permission9>true</permission9> 	// Level of restriction: 
+		<permission10>true</permission10> 	// Level of restriction: 
+		<ID>1028</ID> 		//
+	  </User29>//
+	  //
+	  <User30>// Reserved for log off user
+		<Name>NO USER</Name> 	//
+		<Pwd>password</Pwd> //
+		<permission1>true</permission1> 	// Level of restriction: Lahko se prijavi na startu programa
+		<permission2>false</permission2> 	// Level of restriction: Lahko vstopa v meni nastavitev komunikacije
+		<permission3>false</permission3> 	// Level of restriction: Lahko dostopa do nastavitev posamezne kadi (globalno)
+		<permission4>false</permission4> 	// Level of restriction: Lahko poveže ali prekine povezavo s krmilniki z glavnega zaslona
+		<permission5>false</permission5> 	// Level of restriction: Lahko zažene ali ustavi povezavo s sistemom glavnega zaslona
+		<permission6>false</permission6> 	// Level of restriction: Lahko zažene ali ustavi posamezne kadi z glavnega zaslona
+		<permission7>false</permission7> 	// Level of restriction: Lahko nastavlja prisilne zagone grelnikov
+		<permission8>false</permission8> 	// Level of restriction: 
+		<permission9>false</permission9> 	// Level of restriction: 
+		<permission10>false</permission10> 	// Level of restriction: 
+			<ID>1234</ID> 						//
+		  </User30>//
+		  //
+		  </USERS>//
+		  <STATS>//
+			<kwhTotal>38481,5</kwhTotal>				// Skupna poraba v kWh
+			<hTotal>8</hTotal>						// Skupen čas delovanja (ko je GUI aktiven in je poraba več kot 0W)			
+		  </STATS>//
+	</root>

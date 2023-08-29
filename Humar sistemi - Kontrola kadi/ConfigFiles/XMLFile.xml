@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <GENERAL>
+    <logFilePath>H:\Users\Humar-sistemi\Documents\Visual Studio 2017\Projects\Humar sistemi - Kontrola kadi\Humar sistemi - Kontrola kadi\ConfigFiles\Log.txt</logFilePath>
+    <WatchdogRetries>5</WatchdogRetries>		// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
+	<AutoConnect>False</AutoConnect><GUIrefreshrate>200</GUIrefreshrate>		// program will refresh values every ### miliseconds
+	</GENERAL>
+  <LOGO1>
+    <show>true</show>							// indicates if tabpage is shown on GUI
+    <enabled>true</enabled>						// indicates if device is enabled - (gui, communication ...)
+	<serverIP>192.168.000.201</serverIP>		// format must be ###.###.###.### (192.168.000.001) IP of PLC
+	<localTSAP>"03.00"</localTSAP>				// format must be ##.## (00.03) TSAP is used for comunication between PLCs 
+	<remoteTSAP>"02.00"</remoteTSAP>			// format must be ##.## (00.03) TSAP is used for comunication between PLCs
+	<watchdogEN>true</watchdogEN>				// value must be "true" or "false" .. enable or disable watchdog - watchdog is used for detecting comunication problems	
+	<watchdogAddress>DW 38</watchdogAddress>		// value must be string between valid PLC adress range .. watchdog is used for detecting comunication problems (example DW 100 if watchdog value is Double Word on address 100)
+	<ReadWriteCycle>100</ReadWriteCycle>		// value in miliseconds - frequency at which data aquisition is preformed - read, action, write, delay. (watchdog is also bound at this frequency)
+  </LOGO1>
+  <LOGO2>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.202</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO2>
+  <LOGO3>
+    <show>true</show>
+    <enabled>true</enabled>
+    <serverIP>192.168.000.203</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO3>
+  <LOGO4>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.204</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO4>
+  <LOGO5>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.205</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO5>
+  <LOGO6>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.206</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO6>
+  <LOGO7>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.207</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO7>
+  <LOGO8>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.208</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO8>
+  <LOGO9>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.209</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO9>
+  <LOGO10>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.210</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO10>
+  <LOGO11>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.211</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO11>
+  <LOGO12>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.212</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO12>
+  <LOGO13>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.213</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO13>
+  <LOGO14>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.214</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO14>
+  <LOGO15>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.215</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO15>
+  <LOGO16>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.216</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO16>
+  <LOGO17>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.217</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO17>
+  <LOGO18>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.218</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO18>
+  <LOGO19>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.219</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO19>
+  <LOGO20>
+    <show>true</show>
+    <enabled>false</enabled>
+    <serverIP>192.168.000.220</serverIP>
+    <localTSAP>"03.00"</localTSAP>
+    <remoteTSAP>"02.00"</remoteTSAP>
+    <watchdogEN>true</watchdogEN>
+    <watchdogAddress>DW 38</watchdogAddress>
+    <ReadWriteCycle>100</ReadWriteCycle>
+  </LOGO20>
+</root>
