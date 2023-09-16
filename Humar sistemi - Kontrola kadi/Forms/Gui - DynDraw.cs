@@ -616,7 +616,7 @@ namespace KontrolaKadi
                         TextRenderer.DrawText(e.Graphics, btnConnected[i].Showname, Misc.MeasureString(e, rectConnName[i], btnConnected[i].Showname, 10, FontStyle.Bold), rectConnName[i], Color.White, TextFormatFlags.HorizontalCenter);
                     }
 
-                    //todo else return - ker če ni buttnov nima kej risat
+                    //todo else return - ker če ni buttnov nima kaj risat
                 }
             }
 

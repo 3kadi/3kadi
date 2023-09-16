@@ -23,7 +23,7 @@ namespace KontrolaKadi
             prop.Temperatura26.SyncWithPLC();
             prop.TemperaturaAktivnegaCikla6.SyncWithPLC();
             prop.TemperaturaPasivnegaCikla6.SyncWithPLC();
-            prop.DeltaOnElektrolit6.SyncWithPLC();
+            prop.DeltaT_AlarmElektrolit6.SyncWithPLC();
             prop.AlarmzaT_Elektrolit6.SyncWithPLC();
             prop.Urniki_CikelAktiven6.SyncWithPLC();
             prop.DelovanjeCrpalkeZaCasDolivanje6.SyncWithPLC();

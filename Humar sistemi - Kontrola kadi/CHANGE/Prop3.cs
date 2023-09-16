@@ -74,7 +74,7 @@ namespace KontrolaKadi
         public PlcVars.TemperatureShow Temperatura26;
         public PlcVars.TemperatureShow TemperaturaAktivnegaCikla6;
         public PlcVars.TemperatureShow TemperaturaPasivnegaCikla6;
-        public PlcVars.Word DeltaOnElektrolit6;
+        public PlcVars.Word DeltaT_AlarmElektrolit6;
         public PlcVars.Bit AlarmzaT_Elektrolit6;
         public PlcVars.Bit Urniki_CikelAktiven6;
         public PlcVars.Bit DelovanjeCrpalkeZaCasDolivanje6;
@@ -120,7 +120,7 @@ namespace KontrolaKadi
             Temperatura26 = new PlcVars.TemperatureShow(Client, "W 14", "", "°C", 0, 0.1F, false);
             TemperaturaAktivnegaCikla6 = new PlcVars.TemperatureShow(Client, "W 22", "", "°C", 0, 0.1F, true);
             TemperaturaPasivnegaCikla6 = new PlcVars.TemperatureShow(Client, "W 24", "", "°C", 0, 0.1F, true);
-            DeltaOnElektrolit6 = new PlcVars.Word(Client, "W 70", "", "°C", true);
+            DeltaT_AlarmElektrolit6 = new PlcVars.Word(Client, "W 70", "", "°C", true);
             AlarmzaT_Elektrolit6 = new PlcVars.Bit(Client, "bit at 72.0", "ALARM", "OK", false);
             Urniki_CikelAktiven6 = new PlcVars.Bit(Client, "bit at 73.0", "Aktivno", "Ni aktivno", false);
             DelovanjeCrpalkeZaCasDolivanje6 = new PlcVars.Bit(Client, "bit at 74.0", "Aktivno", "Ni aktivno", false);
@@ -307,7 +307,7 @@ namespace KontrolaKadi
                         DelovanjeHladilnegaSistema6.SyncWithPC(Main_datagrid[1, 4]);
                         Temperatura16.SyncWithPC(Main_datagrid[1, 1]);
                         Temperatura26.SyncWithPC(Main_datagrid[1, 2]);                        
-                        DeltaOnElektrolit6.SyncWithPC(Main_datagrid[1, 10]);
+                        DeltaT_AlarmElektrolit6.SyncWithPC(Main_datagrid[1, 10]);
                         AlarmzaT_Elektrolit6.SyncWithPC(Main_datagrid[1, 13]);                        
                         DelovanjeCrpalkeZaCasDolivanje6.SyncWithPC(Main_datagrid[1, 5]);
                         CrpalkaZaCasDolivanjeOnDelay6.SyncWithPC(Main_datagrid[1, 7], 1);
