@@ -31,16 +31,16 @@ namespace KontrolaKadi
         public DatagridTypes.CheckBox chk6 = new DatagridTypes.CheckBox();
         public DatagridTypes.CheckBox chk7 = new DatagridTypes.CheckBox();
 
-        public DatagridTypes.TempSet ts1 = new DatagridTypes.TempSet(-5, 30, 2);
-        public DatagridTypes.TempSet ts2 = new DatagridTypes.TempSet(-5, 30, 2);
+        public DatagridTypes.TempSet ts1 = new DatagridTypes.TempSet(-5, 30, 1);
+        public DatagridTypes.TempSet ts2 = new DatagridTypes.TempSet(-5, 30, 1);
 
         public DatagridTypes.Delta cb1 = new DatagridTypes.Delta();
         public DatagridTypes.Delta cb2 = new DatagridTypes.Delta();
 
         public DatagridTypes.TempSet cb3 = new DatagridTypes.TempSet(-5,30,1);
 
-        public DatagridTypes.PwrSet p1 = new DatagridTypes.PwrSet(100, 1500, 100);
-        public DatagridTypes.PwrSet p2 = new DatagridTypes.PwrSet(100, 1500, 100);
+        public DatagridTypes.PwrSet p1 = new DatagridTypes.PwrSet(100, 3000, 100);
+        public DatagridTypes.PwrSet p2 = new DatagridTypes.PwrSet(100, 5000, 200);
 
         public DatagridTypes.CheckBox en1 = new DatagridTypes.CheckBox();
 

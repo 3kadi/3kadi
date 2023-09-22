@@ -26,8 +26,8 @@ namespace KontrolaKadi
 
         public DatagridTypes.Histereza cb1_1 = new DatagridTypes.Histereza();
         public DatagridTypes.Delta cb3_18 = new DatagridTypes.Delta();
-        public DatagridTypes.TempSet ts1_1 = new DatagridTypes.TempSet(10, 60, 2);
-        public DatagridTypes.TempSet ts2_1 = new DatagridTypes.TempSet(10, 60, 2);
+        public DatagridTypes.TempSet ts1_1 = new DatagridTypes.TempSet(10, 100, 2);
+        public DatagridTypes.TempSet ts2_1 = new DatagridTypes.TempSet(10, 100, 2);
         public DatagridTypes.MussLauf m1_1 = new DatagridTypes.MussLauf();
         public DatagridTypes.PwrSet p1_1 = new DatagridTypes.PwrSet(1000, 10000, 100);
 
