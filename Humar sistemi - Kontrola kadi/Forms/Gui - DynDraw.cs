@@ -18,8 +18,8 @@ namespace KontrolaKadi
 
         public int GuiID { get; private set; }
         public FormControl FormControl { get; set; }
-        private Rectangle rectTop; // only for color separation on top of the form
-        private Color rectTopColor = Color.FromArgb(-16695460);
+        public Rectangle rectTop; // only for color separation on top of the form
+        public Color rectTopColor = Color.FromArgb(-16695460);
         private SolidBrush rectTopBrush;
 
         bool GuiDisabled_NoConnection;
@@ -168,6 +168,8 @@ namespace KontrolaKadi
         public SmartDatagrid MaxConsumptionGUI1;
         public SmartDatagrid MaxConsumptionGUI2;
 
+        MainsVoltageError MainsErr;
+
         public Gui(XDocument settingsXML, int ID)
         {            
             GuiID = ID;
@@ -193,13 +195,14 @@ namespace KontrolaKadi
             MaxConsumptionGUI1.Location = new Point(rectTop.X + 80, rectTop.Y + 11);
             MaxConsumptionGUI2.Location = new Point(rectTop.X + 80, rectTop.Y + 11);
 
-          
+            MainsErr = new MainsVoltageError(this);
 
             if (GuiID == 1)
             {
                 FormControl.bt1.Prop1.DatagridRowsInMenuGUI1(MaxConsumptionGUI1);
                 Controls.Add(MaxConsumptionGUI1);
                 Controls.Add(ClockShow);
+                Controls.Add(MainsErr);
             }
 
             if (GuiID == 2)
@@ -207,6 +210,7 @@ namespace KontrolaKadi
                 FormControl.bt1.Prop1.DatagridRowsInMenuGUI2(MaxConsumptionGUI2);
                 Controls.Add(MaxConsumptionGUI2);
                 Controls.Add(ClockShow);
+                Controls.Add(MainsErr);
             }
 
 
@@ -441,7 +445,6 @@ namespace KontrolaKadi
 
                 panel.Controls.Add(btnSwitchGui);
 
-
             }
             catch (Exception ex)
             {
@@ -616,7 +619,15 @@ namespace KontrolaKadi
                         TextRenderer.DrawText(e.Graphics, btnConnected[i].Showname, Misc.MeasureString(e, rectConnName[i], btnConnected[i].Showname, 10, FontStyle.Bold), rectConnName[i], Color.White, TextFormatFlags.HorizontalCenter);
                     }
 
-                    //todo else return - ker če ni buttnov nima kaj risat
+                    if (FormControl.bt1.Prop1.NapajanjeOK.Value == 1)
+                    {
+                        MainsErr.Hide();
+                    }
+                    else
+                    {
+                        MainsErr.Show();
+                    }
+                   
                 }
             }
 

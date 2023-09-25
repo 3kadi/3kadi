@@ -23,6 +23,7 @@ namespace KontrolaKadi
             prop.EloxConnected.SyncWithPLC();
             prop.BarveConnected.SyncWithPLC(); 
             prop.PC_Connected.SyncWithPLC();
+            prop.NapajanjeOK.SyncWithPLC();
             prop.WATCHDOG_Logo1.SyncWithPLC();
             prop.StartNetElox.SyncWithPLC();
             prop.StopNetElox.SyncWithPLC();

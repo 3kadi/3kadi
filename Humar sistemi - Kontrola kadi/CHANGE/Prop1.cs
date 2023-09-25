@@ -24,6 +24,8 @@ namespace KontrolaKadi
         public PlcVars.Bit EloxConnected;
         public PlcVars.Bit BarveConnected;
         public PlcVars.Word PC_Connected;
+        public PlcVars.Word NapajanjeOK;
+
         public PlcVars.Word WATCHDOG_Logo1;
         public PlcVars.Word Watchdog_PC_value;
         public PlcVars.Bit BuzzFromPC_Normal;
@@ -73,6 +75,8 @@ namespace KontrolaKadi
             EloxConnected = new PlcVars.Bit(Client, "bit at 4.0", "Povezano", "Ni povezano", false);
             BarveConnected = new PlcVars.Bit(Client, "bit at 6.0", "Povezano", "Ni povezano", false);
             PC_Connected = new PlcVars.Word(Client, "W 42", "Povezan", "Ni povezan", false);
+            NapajanjeOK = new PlcVars.Word(Client, "W 44", "Napaka napajanjalne napetosti", "Napajalna napetost OK", false);
+
             WATCHDOG_Logo1 = new PlcVars.Word(Client, "DW 274", "", "", false);
             BuzzFromPC_Normal = new PlcVars.Bit(Client, "bit at 248.0", "", "", true);
             BuzzFromPC_Urgent = new PlcVars.Bit(Client, "bit at 248.1", "", "", true);

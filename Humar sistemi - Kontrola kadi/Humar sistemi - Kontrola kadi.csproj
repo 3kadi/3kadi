@@ -152,6 +152,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SmartComponents\DatagridTypes.cs" />
+    <Compile Include="SmartComponents\MainsVoltageError.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SmartComponents\SmartDatagrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -258,55 +261,104 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kad - konstrukcija.png" />
+    <None Include="Resources\Kad - konstrukcija.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SYTK_R_nivo.png" />
-    <None Include="Resources\SYTK_grelec.png" />
-    <None Include="Resources\SYTK_ura.png" />
-    <None Include="Resources\4322003-white-background-image.png" />
-    <None Include="Resources\disconnected1.png" />
+    <None Include="Resources\SYTK_R_nivo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SYTK_grelec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SYTK_ura.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\4322003-white-background-image.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\disconnected1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="oa.ico" />
     <Content Include="octopus.png" />
-    <None Include="Resources\manual ctrl.png" />
-    <None Include="Resources\octopus.png" />
-    <None Include="Resources\oa.ico" />
-    <Content Include="Resources\SelectColorIcon.png" />
-    <None Include="Resources\Stop.png" />
-    <None Include="Resources\Start.png" />
+    <None Include="Resources\manual ctrl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\octopus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\oa.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\electfault.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SelectColorIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Stop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kad - konstrukcija Posirjena.png" />
+    <None Include="Resources\Kad - konstrukcija Posirjena.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kad - konstrukcija dvojna L.png" />
+    <None Include="Resources\Kad - konstrukcija dvojna L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kad - konstrukcija dvojna R.png" />
+    <None Include="Resources\Kad - konstrukcija dvojna R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Back.png" />
+    <None Include="Resources\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Forward.png" />
+    <None Include="Resources\Forward.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\warning-icon-24.png" />
+    <None Include="Resources\warning-icon-24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\warning-icon-png-1.png" />
+    <None Include="Resources\warning-icon-png-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\connected.png" />
+    <None Include="Resources\connected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\disconnected.png" />
+    <None Include="Resources\disconnected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\connect_warning.png" />
+    <None Include="Resources\connect_warning.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\connecing.png" />
+    <None Include="Resources\connecing.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

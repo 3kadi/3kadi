@@ -108,6 +108,7 @@ namespace KontrolaKadi
         public PlcVars.Bit Nivo19;
         public PlcVars.Bit DelovanjeGrelca19;
         public PlcVars.TemperatureShow Temperatura119;
+        public PlcVars.TemperatureShow Temperatura219;
         public PlcVars.Word Histereza1_19;
         public PlcVars.TemperatureShow TemperaturaAktivnegaCikla19;
         public PlcVars.TemperatureShow TemperaturaPasivnegaCikla19;
@@ -164,6 +165,7 @@ namespace KontrolaKadi
             Nivo19 = new PlcVars.Bit(Client, "bit at 310.0", Misc.Checkmark, Misc.Crossmark, false);
             DelovanjeGrelca19 = new PlcVars.Bit(Client, "bit at 311.0", Misc.Checkmark, Misc.Crossmark, false);
             Temperatura119 = new PlcVars.TemperatureShow(Client, "W 312", "", "°C", 0, 0.1F, false);
+            Temperatura219 = new PlcVars.TemperatureShow(Client, "W 314", "", "°C", 0, 0.1F, false);
             Histereza1_19 = new PlcVars.Word(Client, "W 318", "", "°C", true);
             TemperaturaAktivnegaCikla19 = new PlcVars.TemperatureShow(Client, "W 322", "", "°C", 0, 0.1F, true);
             TemperaturaPasivnegaCikla19 = new PlcVars.TemperatureShow(Client, "W 324", "", "°C", 0, 0.1F, true);
@@ -185,7 +187,7 @@ namespace KontrolaKadi
         }
 
 
-        // add datagrid elements for submenu KAD18
+        // add datagrid elements for submenu KAD11
         public void DatagridRowsInSubmenu_11(SmartDatagrid datagrid)
         {
             if (datagrid != null)
@@ -200,8 +202,8 @@ namespace KontrolaKadi
 
                 r = datagrid.Rows.Add("Sarža: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
 
-                r = datagrid.Rows.Add("Temp. 1: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
-                                
+                r = datagrid.Rows.Add("Temp. 1: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;                
+
                 r = datagrid.Rows.Add("Nivo: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
 
                 r = datagrid.Rows.Add("Ogrevanje: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;                
@@ -245,6 +247,8 @@ namespace KontrolaKadi
 
                 r = datagrid.Rows.Add("Temp. 1: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
 
+                r = datagrid.Rows.Add("Temp. 2: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
+
                 r = datagrid.Rows.Add("Nivo: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
 
                 r = datagrid.Rows.Add("Ogrevanje: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
@@ -272,7 +276,7 @@ namespace KontrolaKadi
         }
 
 
-        // KAD18
+        // KAD11
         public void AddRowsToScheduleDatagrid_11(SmartDatagrid datagrid, SmartDatagrid Statusdatagrid)
         {
             if (datagrid != null)
@@ -379,7 +383,7 @@ namespace KontrolaKadi
         }
 
 
-        //KAD18
+        //KAD11
         public void UpdateValues_11(SmartDatagrid Main_datagrid, SmartDatagrid Shedule_datagrid, SmartDatagrid Statusdatagrid)
         {
             try
@@ -468,14 +472,15 @@ namespace KontrolaKadi
                         // GET/SET With PC 
                         PrisotnostSarze19.SyncWithPC(Main_datagrid[1, 0]);
                         Temperatura119.SyncWithPC(Main_datagrid[1, 1]);
-                        Nivo19.SyncWithPC(Main_datagrid[1, 2]);
-                        DelovanjeGrelca19.SyncWithPC(Main_datagrid[1, 3]);
-                        SkupnaPorabaKadi19.SyncWithPC(Main_datagrid[1, 4]);
-                        Histereza1_19.SyncWithPC(Main_datagrid[1, 5]);
-                        DeltaOn2_19.SyncWithPC(Main_datagrid[1, 6]);
-                        Alarmzatemperaturo19.SyncWithPC(Main_datagrid[1, 7]);
-                        MUSS_Grelec19.SyncWithPC(Main_datagrid[1, 8]);
-                        MocGrelca19.SyncWithPC(Main_datagrid[1, 9]);
+                        Temperatura219.SyncWithPC(Main_datagrid[1, 2]);
+                        Nivo19.SyncWithPC(Main_datagrid[1, 3]);
+                        DelovanjeGrelca19.SyncWithPC(Main_datagrid[1, 4]);
+                        SkupnaPorabaKadi19.SyncWithPC(Main_datagrid[1, 5]);
+                        Histereza1_19.SyncWithPC(Main_datagrid[1, 6]);
+                        DeltaOn2_19.SyncWithPC(Main_datagrid[1, 7]);
+                        Alarmzatemperaturo19.SyncWithPC(Main_datagrid[1, 8]);
+                        MUSS_Grelec19.SyncWithPC(Main_datagrid[1, 9]);
+                        MocGrelca19.SyncWithPC(Main_datagrid[1, 10]);
 
                         Urniki_CikelAktiven19.SyncWithPC(Statusdatagrid[1, 0]);
                         TemperaturaAktivnegaCikla19.SyncWithPC(Statusdatagrid[1, 1]);

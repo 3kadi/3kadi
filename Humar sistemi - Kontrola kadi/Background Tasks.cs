@@ -46,11 +46,7 @@ namespace KontrolaKadi
 
         public Label[] watchdogLabel = new Label[21];        
                 
-                     
-
-        public bool[] WatchdogEnabled { get; set; }
-
-        
+               
         public BackroundTasks(XDocument settingsXML)
         {
             Gui = new Form[3];
@@ -96,7 +92,7 @@ namespace KontrolaKadi
         public void StartBackgroundTasks()
         {
             Watchdog_PC = new BackgroundWorker();
-            WatchdogEnabled = new bool[21];                        
+                   
 
             for (int i = 1; i < watchdogLabel.Length; i++)
             {
@@ -261,7 +257,7 @@ namespace KontrolaKadi
                     {
                         if (IfDisconnectProcedure(device)) { return; }
 
-                        errCode = Watchdog(LOGO[device], WatchdogEnabled[device], watchdogAddr, ref progress, ref thisVal, ref prevVal, WatchdogRetries, ref FailCnt);
+                        errCode = Watchdog(LOGO[device], watchdogAddr, ref progress, ref thisVal, ref prevVal, WatchdogRetries, ref FailCnt);
 
                         if (IfDisconnectProcedure(device)) { return; }
 
@@ -447,70 +443,51 @@ namespace KontrolaKadi
             else { return false; }
         }
 
-        private int Watchdog(S7Client Client, bool WD_read_Enabled, string typeAndAdress, ref string Progress, ref int thisValue, ref int previousValue, int CanFail_timesWithoutError, ref int CanFailCnt)
-        {                                    
+        private int Watchdog(S7Client Client, string typeAndAdress, ref string Progress, ref int thisValue, ref int previousValue, int CanFail_timesWithoutError, ref int CanFailCnt)
+        {
             int err = 0;
 
-                        
-            if (err == 0)
+            // watchdog function
+
+            thisValue = Connection.PLCread(Client, typeAndAdress, out err);
+            if (err != 0 || thisValue <= 0) // if there is an error
             {
-                // watchdog function
-                if (WD_read_Enabled)
+                previousValue = thisValue;
+                Progress = "ERR";
+                CanFailCnt = 0;
+                if (err == 0)
                 {
-                    thisValue = Connection.PLCread(Client, typeAndAdress, out err);
-                    if (err != 0 || thisValue <= 0) // if there is an error
+                    err = S7Consts.err_watchdogDoesntChange;
+                }
+                return err;
+            }
+            else // if there is no error
+            {
+                if (thisValue == previousValue) // value of watchdog does not change...
+                {
+                    CanFailCnt++;
+                    if (CanFailCnt >= CanFail_timesWithoutError) // ...does not change multiple times ( fail counter ++ )
                     {
-                        previousValue = thisValue;
                         Progress = "ERR";
+                        previousValue = thisValue;
                         CanFailCnt = 0;
-                        if (err == 0)
-                        {
-                            err = S7Consts.err_watchdogDoesntChange;
-                        }
-                        return err;
+                        return -2;
                     }
-                    else // if there is no error
+                    else // waiting for fail counter to announce an error
                     {
-                        if (thisValue == previousValue) // value of watchdog does not change...
-                        {
-                            CanFailCnt++;
-                            if (CanFailCnt >= CanFail_timesWithoutError) // ...does not change multiple times ( fail counter ++ )
-                            {
-                                Progress = "ERR";
-                                previousValue = thisValue;
-                                CanFailCnt = 0;
-                                return -2;
-                            }
-                            else // waiting for fail counter to announce an error
-                            {
-                                return 0;
-                            }
-
-                        }
-                        else
-                        {
-                            Progress = "Running: " + thisValue.ToString();
-                            previousValue = thisValue;
-                            CanFailCnt = 0;
-                            return err;
-                        }
+                        return 0;
                     }
-
 
                 }
                 else
                 {
-                    Progress = "Watchdog disabled! ";
-                    return 0;
+                    Progress = "Running: " + thisValue.ToString();
+                    previousValue = thisValue;
+                    CanFailCnt = 0;
+                    return err;
                 }
             }
-            else
-            {
-                Progress = "ERR";
-                return err;
-            }
-            
-            
+
 
         }
 

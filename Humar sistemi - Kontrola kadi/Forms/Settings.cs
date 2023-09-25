@@ -693,292 +693,6 @@ namespace KontrolaKadi
 
         #endregion btnDisconnect
 
-        #region ENWatchdog
-
-        private void CheckBoxWatchdogENLOGO1_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO1").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO1.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 1, textBoxPathLOG.Text);
-            }
-
-        }
-
-        private void CheckBoxWatchdogENLOGO2_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO2").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO2.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 2, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO3_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO3").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO3.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 3, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO4_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO4").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO4.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 4, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO5_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO5").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO5.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 5, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO6_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO6").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO6.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 6, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO7_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO7").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO7.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 7, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO8_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO8").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO8.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 8, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO9_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO9").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO9.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 9, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO10_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO10").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO10.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 10, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO11_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO11").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO11.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 11, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO12_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO12").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO12.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 12, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO13_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO13").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO13.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 13, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO14_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO14").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO14.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 14, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO15_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO15").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO15.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 15, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO16_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO16").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO16.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 16, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO17_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO17").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO17.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 17, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO18_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO18").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO18.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 18, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO19_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO19").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO19.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 19, textBoxPathLOG.Text);
-            }
-        }
-
-        private void CheckBoxWatchdogENLOGO20_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                XML_handler.settingsXML.Element("root").Element("LOGO20").Element("watchdogEN").SetValue(CheckBoxWatchdogENLOGO20.Checked);
-                XML_handler.SaveXML();
-            }
-            catch (Exception ex)
-            {
-
-                WL("Error while changing settings - XML file entry is corupted (entry: LOGO watchdogEN): " + ex.Message, 20, textBoxPathLOG.Text);
-            }
-        }
-
-
-        #endregion ENWatchdog
-
         #region AddressWatchdog
 
 
@@ -1869,30 +1583,7 @@ namespace KontrolaKadi
             textBoxDeviceIPLOGO19.Text =XML_handler.settingsXML.Element("root").Element("LOGO19").Element("serverIP").Value.Replace("\"", "");
             textBoxDeviceIPLOGO20.Text =XML_handler.settingsXML.Element("root").Element("LOGO20").Element("serverIP").Value.Replace("\"", "");
 
-
-
-
-            FormControl.bt1.WatchdogEnabled[1] = CheckBoxWatchdogENLOGO1.Checked;
-            FormControl.bt1.WatchdogEnabled[2] = CheckBoxWatchdogENLOGO2.Checked;
-            FormControl.bt1.WatchdogEnabled[3] = CheckBoxWatchdogENLOGO3.Checked;
-            FormControl.bt1.WatchdogEnabled[4] = CheckBoxWatchdogENLOGO4.Checked;
-            FormControl.bt1.WatchdogEnabled[5] = CheckBoxWatchdogENLOGO5.Checked;
-            FormControl.bt1.WatchdogEnabled[6] = CheckBoxWatchdogENLOGO6.Checked;
-            FormControl.bt1.WatchdogEnabled[7] = CheckBoxWatchdogENLOGO7.Checked;
-            FormControl.bt1.WatchdogEnabled[8] = CheckBoxWatchdogENLOGO8.Checked;
-            FormControl.bt1.WatchdogEnabled[9] = CheckBoxWatchdogENLOGO9.Checked;
-            FormControl.bt1.WatchdogEnabled[10] = CheckBoxWatchdogENLOGO10.Checked;
-            FormControl.bt1.WatchdogEnabled[11] = CheckBoxWatchdogENLOGO11.Checked;
-            FormControl.bt1.WatchdogEnabled[12] = CheckBoxWatchdogENLOGO12.Checked;
-            FormControl.bt1.WatchdogEnabled[13] = CheckBoxWatchdogENLOGO13.Checked;
-            FormControl.bt1.WatchdogEnabled[14] = CheckBoxWatchdogENLOGO14.Checked;
-            FormControl.bt1.WatchdogEnabled[15] = CheckBoxWatchdogENLOGO15.Checked;
-            FormControl.bt1.WatchdogEnabled[16] = CheckBoxWatchdogENLOGO16.Checked;
-            FormControl.bt1.WatchdogEnabled[17] = CheckBoxWatchdogENLOGO17.Checked;
-            FormControl.bt1.WatchdogEnabled[18] = CheckBoxWatchdogENLOGO18.Checked;
-            FormControl.bt1.WatchdogEnabled[19] = CheckBoxWatchdogENLOGO19.Checked;
-            FormControl.bt1.WatchdogEnabled[20] = CheckBoxWatchdogENLOGO20.Checked;
-                        
+                                               
             #endregion
 
 
@@ -1905,7 +1596,6 @@ namespace KontrolaKadi
 
                 object o = (string)"Skip UpdateFieldsXML";
                 ButtonConnectALL_Click(o, null);
-
             }
 
             // Worker for populating values
@@ -2106,25 +1796,25 @@ namespace KontrolaKadi
 
             switch (device)
             {
-                case 1: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO1.Enabled = false; CheckBoxWatchdogENLOGO1.Enabled = false; break;
-                case 2: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO2.Enabled = false; TextBoxWatchdogAddressLOGO2.Enabled = false; break;
-                case 3: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO3.Enabled = false; TextBoxWatchdogAddressLOGO3.Enabled = false; break;
-                case 4: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO4.Enabled = false; TextBoxWatchdogAddressLOGO4.Enabled = false; break;
-                case 5: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO5.Enabled = false; TextBoxWatchdogAddressLOGO5.Enabled = false; break;
-                case 6: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO6.Enabled = false; TextBoxWatchdogAddressLOGO6.Enabled = false; break;
-                case 7: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO7.Enabled = false; TextBoxWatchdogAddressLOGO7.Enabled = false; break;
-                case 8: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO8.Enabled = false; TextBoxWatchdogAddressLOGO8.Enabled = false; break;
-                case 9: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO9.Enabled = false; TextBoxWatchdogAddressLOGO9.Enabled = false; break;
-                case 10: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO10.Enabled = false; TextBoxWatchdogAddressLOGO10.Enabled = false; break;
-                case 11: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO12.Enabled = false; TextBoxWatchdogAddressLOGO12.Enabled = false; break;
-                case 13: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO13.Enabled = false; TextBoxWatchdogAddressLOGO13.Enabled = false; break;
-                case 14: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO14.Enabled = false; TextBoxWatchdogAddressLOGO14.Enabled = false; break;
-                case 15: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO15.Enabled = false; TextBoxWatchdogAddressLOGO15.Enabled = false; break;
-                case 16: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO16.Enabled = false; TextBoxWatchdogAddressLOGO16.Enabled = false; break;
-                case 17: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO17.Enabled = false; TextBoxWatchdogAddressLOGO17.Enabled = false; break;
-                case 18: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO18.Enabled = false; TextBoxWatchdogAddressLOGO18.Enabled = false; break;
-                case 19: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO19.Enabled = false; TextBoxWatchdogAddressLOGO19.Enabled = false; break;
-                case 20: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO20.Enabled = false; TextBoxWatchdogAddressLOGO20.Enabled = false; break;
+                case 1: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO1.Enabled = false;  break;
+                case 2: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO2.Enabled = false; break;
+                case 3: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO3.Enabled = false; break;
+                case 4: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO4.Enabled = false; break;
+                case 5: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO5.Enabled = false; break;
+                case 6: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO6.Enabled = false; break;
+                case 7: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO7.Enabled = false; break;
+                case 8: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO8.Enabled = false; break;
+                case 9: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO9.Enabled = false; break;
+                case 10: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO10.Enabled = false; break;
+                case 11: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO12.Enabled = false; break;
+                case 13: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO13.Enabled = false; break;
+                case 14: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO14.Enabled = false; break;
+                case 15: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO15.Enabled = false; break;
+                case 16: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO16.Enabled = false; break;
+                case 17: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO17.Enabled = false; break;
+                case 18: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO18.Enabled = false; break;
+                case 19: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO19.Enabled = false; break;
+                case 20: if (!FormControl.bt1.BackgroundWorker[device].IsBusy) { obj = (int)device; list.Add(obj); FormControl.bt1.BackgroundWorker[device].RunWorkerAsync(); } TextBoxWatchdogAddressLOGO20.Enabled = false; break;
                 default: FormControl.bt1.WL("Internal Error Switch statement does not support this device (message source: ConectAsync() method)", device); break;
             }
 
@@ -2134,26 +1824,26 @@ namespace KontrolaKadi
         {
             switch (device)
             {
-                case 1: FormControl.bt1.WL("Disconected by the user", 1); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO1.Enabled = true; TextBoxWatchdogAddressLOGO1.Enabled = true; break;
-                case 2: FormControl.bt1.WL("Disconected by the user", 2); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO2.Enabled = true; TextBoxWatchdogAddressLOGO2.Enabled = true; break;
-                case 3: FormControl.bt1.WL("Disconected by the user", 3); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO3.Enabled = true; TextBoxWatchdogAddressLOGO3.Enabled = true; break;
-                case 4: FormControl.bt1.WL("Disconected by the user", 4); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO4.Enabled = true; TextBoxWatchdogAddressLOGO4.Enabled = true; break;
-                case 5: FormControl.bt1.WL("Disconected by the user", 5); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO5.Enabled = true; TextBoxWatchdogAddressLOGO5.Enabled = true; break;
-                case 6: FormControl.bt1.WL("Disconected by the user", 6); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO6.Enabled = true; TextBoxWatchdogAddressLOGO6.Enabled = true; break;
-                case 7: FormControl.bt1.WL("Disconected by the user", 7); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO7.Enabled = true; TextBoxWatchdogAddressLOGO7.Enabled = true; break;
-                case 8: FormControl.bt1.WL("Disconected by the user", 8); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO8.Enabled = true; TextBoxWatchdogAddressLOGO8.Enabled = true; break;
-                case 9: FormControl.bt1.WL("Disconected by the user", 9); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();   CheckBoxWatchdogENLOGO9.Enabled = true; TextBoxWatchdogAddressLOGO9.Enabled = true; break;
-                case 10: FormControl.bt1.WL("Disconected by the user", 10); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO10.Enabled = true; TextBoxWatchdogAddressLOGO10.Enabled = true; break;
-                case 11: FormControl.bt1.WL("Disconected by the user", 11); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO11.Enabled = true; TextBoxWatchdogAddressLOGO11.Enabled = true; break;
-                case 12: FormControl.bt1.WL("Disconected by the user", 12); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO12.Enabled = true; TextBoxWatchdogAddressLOGO12.Enabled = true; break;
-                case 13: FormControl.bt1.WL("Disconected by the user", 13); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO13.Enabled = true; TextBoxWatchdogAddressLOGO13.Enabled = true; break;
-                case 14: FormControl.bt1.WL("Disconected by the user", 14); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO14.Enabled = true; TextBoxWatchdogAddressLOGO14.Enabled = true; break;
-                case 15: FormControl.bt1.WL("Disconected by the user", 15); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO15.Enabled = true; TextBoxWatchdogAddressLOGO15.Enabled = true; break;
-                case 16: FormControl.bt1.WL("Disconected by the user", 16); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO16.Enabled = true; TextBoxWatchdogAddressLOGO16.Enabled = true; break;
-                case 17: FormControl.bt1.WL("Disconected by the user", 17); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO17.Enabled = true; TextBoxWatchdogAddressLOGO17.Enabled = true; break;
-                case 18: FormControl.bt1.WL("Disconected by the user", 18); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO18.Enabled = true; TextBoxWatchdogAddressLOGO18.Enabled = true; break;
-                case 19: FormControl.bt1.WL("Disconected by the user", 19); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO19.Enabled = true; TextBoxWatchdogAddressLOGO19.Enabled = true; break;
-                case 20: FormControl.bt1.WL("Disconected by the user", 20); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  CheckBoxWatchdogENLOGO20.Enabled = true; TextBoxWatchdogAddressLOGO20.Enabled = true; break;
+                case 1: FormControl.bt1.WL("Disconected by the user", 1); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO1.Enabled = true; break;
+                case 2: FormControl.bt1.WL("Disconected by the user", 2); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO2.Enabled = true; break;
+                case 3: FormControl.bt1.WL("Disconected by the user", 3); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO3.Enabled = true; break;
+                case 4: FormControl.bt1.WL("Disconected by the user", 4); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO4.Enabled = true; break;
+                case 5: FormControl.bt1.WL("Disconected by the user", 5); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO5.Enabled = true; break;
+                case 6: FormControl.bt1.WL("Disconected by the user", 6); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO6.Enabled = true; break;
+                case 7: FormControl.bt1.WL("Disconected by the user", 7); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO7.Enabled = true; break;
+                case 8: FormControl.bt1.WL("Disconected by the user", 8); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO8.Enabled = true; break;
+                case 9: FormControl.bt1.WL("Disconected by the user", 9); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect();  TextBoxWatchdogAddressLOGO9.Enabled = true; break;
+                case 10: FormControl.bt1.WL("Disconected by the user", 10); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO10.Enabled = true; break;
+                case 11: FormControl.bt1.WL("Disconected by the user", 11); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO11.Enabled = true; break;
+                case 12: FormControl.bt1.WL("Disconected by the user", 12); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO12.Enabled = true; break;
+                case 13: FormControl.bt1.WL("Disconected by the user", 13); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO13.Enabled = true; break;
+                case 14: FormControl.bt1.WL("Disconected by the user", 14); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO14.Enabled = true; break;
+                case 15: FormControl.bt1.WL("Disconected by the user", 15); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO15.Enabled = true; break;
+                case 16: FormControl.bt1.WL("Disconected by the user", 16); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO16.Enabled = true; break;
+                case 17: FormControl.bt1.WL("Disconected by the user", 17); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO17.Enabled = true; break;
+                case 18: FormControl.bt1.WL("Disconected by the user", 18); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO18.Enabled = true; break;
+                case 19: FormControl.bt1.WL("Disconected by the user", 19); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO19.Enabled = true; break;
+                case 20: FormControl.bt1.WL("Disconected by the user", 20); this.Invoke(new MethodInvoker(delegate { FormControl.bt1.BackgroundWorker[device].CancelAsync(); })); FormControl.bt1.LOGO[device].Disconnect(); TextBoxWatchdogAddressLOGO20.Enabled = true; break;
                 default: FormControl.bt1.WL("Internal Error Switch statement does not support this device (message source: DisconectAsync() method)", device); break;
             }
 
@@ -2190,6 +1880,8 @@ namespace KontrolaKadi
                 labelWatchdogRuning18.Text = FormControl.bt1.watchdogLabel[18].Text;
                 labelWatchdogRuning19.Text = FormControl.bt1.watchdogLabel[19].Text;
                 labelWatchdogRuning20.Text = FormControl.bt1.watchdogLabel[20].Text;
+
+                UpdateFieldsAll();
 
             }));
 

@@ -139,6 +139,8 @@ namespace KontrolaKadi
                         throw new Exception();
                     }
                 }
+
+                
             }
             catch (Exception e)
             {

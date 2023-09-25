@@ -37,8 +37,7 @@
             this.label88 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning20 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO20 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO20 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO20 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO20 = new System.Windows.Forms.Button();
             this.groupBox144 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO20 = new System.Windows.Forms.TextBox();
@@ -56,8 +55,7 @@
             this.label83 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning19 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO19 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO19 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO19 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO19 = new System.Windows.Forms.Button();
             this.groupBox136 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO19 = new System.Windows.Forms.TextBox();
@@ -75,8 +73,7 @@
             this.label78 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning18 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO18 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO18 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO18 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO18 = new System.Windows.Forms.Button();
             this.groupBox128 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO18 = new System.Windows.Forms.TextBox();
@@ -94,8 +91,7 @@
             this.label73 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning17 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO17 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO17 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO17 = new System.Windows.Forms.TextBox();         
             this.BtnDisconnectLOGO17 = new System.Windows.Forms.Button();
             this.groupBox120 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO17 = new System.Windows.Forms.TextBox();
@@ -113,8 +109,7 @@
             this.label68 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning16 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO16 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO16 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO16 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO16 = new System.Windows.Forms.Button();
             this.groupBox112 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO16 = new System.Windows.Forms.TextBox();
@@ -132,8 +127,7 @@
             this.label63 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning15 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO15 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO15 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO15 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO15 = new System.Windows.Forms.Button();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO15 = new System.Windows.Forms.TextBox();
@@ -151,8 +145,7 @@
             this.label58 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning14 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO14 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO14 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO14 = new System.Windows.Forms.TextBox();         
             this.BtnDisconnectLOGO14 = new System.Windows.Forms.Button();
             this.groupBox96 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO14 = new System.Windows.Forms.TextBox();
@@ -170,8 +163,7 @@
             this.label53 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning13 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO13 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO13 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO13 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO13 = new System.Windows.Forms.Button();
             this.groupBox88 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO13 = new System.Windows.Forms.TextBox();
@@ -189,8 +181,7 @@
             this.label48 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning12 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO12 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO12 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO12 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO12 = new System.Windows.Forms.Button();
             this.groupBox80 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO12 = new System.Windows.Forms.TextBox();
@@ -208,8 +199,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning11 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO11 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO11 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO11 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO11 = new System.Windows.Forms.Button();
             this.groupBox72 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO11 = new System.Windows.Forms.TextBox();
@@ -227,8 +217,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning10 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO10 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO10 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO10 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO10 = new System.Windows.Forms.Button();
             this.groupBox64 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO10 = new System.Windows.Forms.TextBox();
@@ -246,8 +235,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning9 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO9 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO9 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO9 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO9 = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO9 = new System.Windows.Forms.TextBox();
@@ -265,8 +253,7 @@
             this.label93 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning8 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO8 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO8 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO8 = new System.Windows.Forms.TextBox();         
             this.BtnDisconnectLOGO8 = new System.Windows.Forms.Button();
             this.groupBox152 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO8 = new System.Windows.Forms.TextBox();
@@ -284,8 +271,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning7 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO7 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO7 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO7 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO7 = new System.Windows.Forms.Button();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO7 = new System.Windows.Forms.TextBox();
@@ -303,8 +289,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning6 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO6 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO6 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO6 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO6 = new System.Windows.Forms.Button();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO6 = new System.Windows.Forms.TextBox();
@@ -322,8 +307,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning5 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO5 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO5 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO5 = new System.Windows.Forms.TextBox();         
             this.BtnDisconnectLOGO5 = new System.Windows.Forms.Button();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO5 = new System.Windows.Forms.TextBox();
@@ -341,8 +325,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning4 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO4 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO4 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO4 = new System.Windows.Forms.TextBox();          
             this.BtnDisconnectLOGO4 = new System.Windows.Forms.Button();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO4 = new System.Windows.Forms.TextBox();
@@ -360,8 +343,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO3 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO3 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO3 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO3 = new System.Windows.Forms.Button();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO3 = new System.Windows.Forms.TextBox();
@@ -379,8 +361,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO2 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO2 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO2 = new System.Windows.Forms.TextBox();           
             this.BtnDisconnectLOGO2 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO2 = new System.Windows.Forms.TextBox();
@@ -398,8 +379,7 @@
             this.labelExample1 = new System.Windows.Forms.Label();
             this.labelWatchdogRuning1 = new System.Windows.Forms.Label();
             this.labelAddressWD1 = new System.Windows.Forms.Label();
-            this.TextBoxWatchdogAddressLOGO1 = new System.Windows.Forms.TextBox();
-            this.CheckBoxWatchdogENLOGO1 = new System.Windows.Forms.CheckBox();
+            this.TextBoxWatchdogAddressLOGO1 = new System.Windows.Forms.TextBox();     
             this.BtnDisconnectLOGO1 = new System.Windows.Forms.Button();
             this.groupBoxRemoteTSAP1 = new System.Windows.Forms.GroupBox();
             this.textBoxRemoteTSAPLOGO1 = new System.Windows.Forms.TextBox();
@@ -665,6 +645,7 @@
             // 
             this.TextBoxRWcycLOGO20.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO20.Name = "TextBoxRWcycLOGO20";
+            this.TextBoxRWcycLOGO20.ReadOnly = true;
             this.TextBoxRWcycLOGO20.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO20.TabIndex = 0;
             this.TextBoxRWcycLOGO20.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO20_TextChanged);
@@ -674,8 +655,7 @@
             this.groupBox143.Controls.Add(this.label88);
             this.groupBox143.Controls.Add(this.labelWatchdogRuning20);
             this.groupBox143.Controls.Add(this.label90);
-            this.groupBox143.Controls.Add(this.TextBoxWatchdogAddressLOGO20);
-            this.groupBox143.Controls.Add(this.CheckBoxWatchdogENLOGO20);
+            this.groupBox143.Controls.Add(this.TextBoxWatchdogAddressLOGO20);           
             this.groupBox143.Location = new System.Drawing.Point(350, 19);
             this.groupBox143.Name = "groupBox143";
             this.groupBox143.Size = new System.Drawing.Size(201, 82);
@@ -716,18 +696,7 @@
             this.TextBoxWatchdogAddressLOGO20.Name = "TextBoxWatchdogAddressLOGO20";
             this.TextBoxWatchdogAddressLOGO20.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO20.TabIndex = 8;
-            this.TextBoxWatchdogAddressLOGO20.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO20_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO20
-            // 
-            this.CheckBoxWatchdogENLOGO20.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO20.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO20.Name = "CheckBoxWatchdogENLOGO20";
-            this.CheckBoxWatchdogENLOGO20.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO20.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO20.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO20.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO20.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO20_CheckedChanged);
+            this.TextBoxWatchdogAddressLOGO20.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO20_TextChanged);           
             // 
             // BtnDisconnectLOGO20
             // 
@@ -853,6 +822,7 @@
             // 
             this.TextBoxRWcycLOGO19.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO19.Name = "TextBoxRWcycLOGO19";
+            this.TextBoxRWcycLOGO19.ReadOnly = true;
             this.TextBoxRWcycLOGO19.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO19.TabIndex = 0;
             this.TextBoxRWcycLOGO19.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO19_TextChanged);
@@ -862,8 +832,7 @@
             this.groupBox135.Controls.Add(this.label83);
             this.groupBox135.Controls.Add(this.labelWatchdogRuning19);
             this.groupBox135.Controls.Add(this.label85);
-            this.groupBox135.Controls.Add(this.TextBoxWatchdogAddressLOGO19);
-            this.groupBox135.Controls.Add(this.CheckBoxWatchdogENLOGO19);
+            this.groupBox135.Controls.Add(this.TextBoxWatchdogAddressLOGO19);           
             this.groupBox135.Location = new System.Drawing.Point(350, 19);
             this.groupBox135.Name = "groupBox135";
             this.groupBox135.Size = new System.Drawing.Size(201, 82);
@@ -904,18 +873,7 @@
             this.TextBoxWatchdogAddressLOGO19.Name = "TextBoxWatchdogAddressLOGO19";
             this.TextBoxWatchdogAddressLOGO19.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO19.TabIndex = 8;
-            this.TextBoxWatchdogAddressLOGO19.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO19_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO19
-            // 
-            this.CheckBoxWatchdogENLOGO19.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO19.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO19.Name = "CheckBoxWatchdogENLOGO19";
-            this.CheckBoxWatchdogENLOGO19.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO19.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO19.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO19.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO19.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO19_CheckedChanged);
+            this.TextBoxWatchdogAddressLOGO19.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO19_TextChanged);           
             // 
             // BtnDisconnectLOGO19
             // 
@@ -1041,6 +999,7 @@
             // 
             this.TextBoxRWcycLOGO18.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO18.Name = "TextBoxRWcycLOGO18";
+            this.TextBoxRWcycLOGO18.ReadOnly = true;
             this.TextBoxRWcycLOGO18.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO18.TabIndex = 0;
             this.TextBoxRWcycLOGO18.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO18_TextChanged);
@@ -1050,8 +1009,7 @@
             this.groupBox127.Controls.Add(this.label78);
             this.groupBox127.Controls.Add(this.labelWatchdogRuning18);
             this.groupBox127.Controls.Add(this.label80);
-            this.groupBox127.Controls.Add(this.TextBoxWatchdogAddressLOGO18);
-            this.groupBox127.Controls.Add(this.CheckBoxWatchdogENLOGO18);
+            this.groupBox127.Controls.Add(this.TextBoxWatchdogAddressLOGO18);          
             this.groupBox127.Location = new System.Drawing.Point(350, 19);
             this.groupBox127.Name = "groupBox127";
             this.groupBox127.Size = new System.Drawing.Size(201, 82);
@@ -1093,17 +1051,7 @@
             this.TextBoxWatchdogAddressLOGO18.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO18.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO18.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO18_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO18
-            // 
-            this.CheckBoxWatchdogENLOGO18.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO18.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO18.Name = "CheckBoxWatchdogENLOGO18";
-            this.CheckBoxWatchdogENLOGO18.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO18.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO18.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO18.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO18.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO18_CheckedChanged);
+          
             // 
             // BtnDisconnectLOGO18
             // 
@@ -1229,6 +1177,7 @@
             // 
             this.TextBoxRWcycLOGO17.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO17.Name = "TextBoxRWcycLOGO17";
+            this.TextBoxRWcycLOGO17.ReadOnly = true;
             this.TextBoxRWcycLOGO17.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO17.TabIndex = 0;
             this.TextBoxRWcycLOGO17.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO17_TextChanged);
@@ -1238,8 +1187,7 @@
             this.groupBox119.Controls.Add(this.label73);
             this.groupBox119.Controls.Add(this.labelWatchdogRuning17);
             this.groupBox119.Controls.Add(this.label75);
-            this.groupBox119.Controls.Add(this.TextBoxWatchdogAddressLOGO17);
-            this.groupBox119.Controls.Add(this.CheckBoxWatchdogENLOGO17);
+            this.groupBox119.Controls.Add(this.TextBoxWatchdogAddressLOGO17);           
             this.groupBox119.Location = new System.Drawing.Point(350, 19);
             this.groupBox119.Name = "groupBox119";
             this.groupBox119.Size = new System.Drawing.Size(201, 82);
@@ -1281,17 +1229,7 @@
             this.TextBoxWatchdogAddressLOGO17.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO17.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO17.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO17_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO17
-            // 
-            this.CheckBoxWatchdogENLOGO17.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO17.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO17.Name = "CheckBoxWatchdogENLOGO17";
-            this.CheckBoxWatchdogENLOGO17.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO17.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO17.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO17.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO17.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO17_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO17
             // 
@@ -1417,6 +1355,7 @@
             // 
             this.TextBoxRWcycLOGO16.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO16.Name = "TextBoxRWcycLOGO16";
+            this.TextBoxRWcycLOGO16.ReadOnly = true;
             this.TextBoxRWcycLOGO16.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO16.TabIndex = 0;
             this.TextBoxRWcycLOGO16.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO16_TextChanged);
@@ -1426,8 +1365,7 @@
             this.groupBox111.Controls.Add(this.label68);
             this.groupBox111.Controls.Add(this.labelWatchdogRuning16);
             this.groupBox111.Controls.Add(this.label70);
-            this.groupBox111.Controls.Add(this.TextBoxWatchdogAddressLOGO16);
-            this.groupBox111.Controls.Add(this.CheckBoxWatchdogENLOGO16);
+            this.groupBox111.Controls.Add(this.TextBoxWatchdogAddressLOGO16);           
             this.groupBox111.Location = new System.Drawing.Point(350, 19);
             this.groupBox111.Name = "groupBox111";
             this.groupBox111.Size = new System.Drawing.Size(201, 82);
@@ -1469,17 +1407,7 @@
             this.TextBoxWatchdogAddressLOGO16.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO16.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO16.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO16_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO16
-            // 
-            this.CheckBoxWatchdogENLOGO16.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO16.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO16.Name = "CheckBoxWatchdogENLOGO16";
-            this.CheckBoxWatchdogENLOGO16.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO16.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO16.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO16.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO16.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO16_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO16
             // 
@@ -1605,6 +1533,7 @@
             // 
             this.TextBoxRWcycLOGO15.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO15.Name = "TextBoxRWcycLOGO15";
+            this.TextBoxRWcycLOGO15.ReadOnly = true;
             this.TextBoxRWcycLOGO15.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO15.TabIndex = 0;
             this.TextBoxRWcycLOGO15.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO15_TextChanged);
@@ -1614,8 +1543,7 @@
             this.groupBox103.Controls.Add(this.label63);
             this.groupBox103.Controls.Add(this.labelWatchdogRuning15);
             this.groupBox103.Controls.Add(this.label65);
-            this.groupBox103.Controls.Add(this.TextBoxWatchdogAddressLOGO15);
-            this.groupBox103.Controls.Add(this.CheckBoxWatchdogENLOGO15);
+            this.groupBox103.Controls.Add(this.TextBoxWatchdogAddressLOGO15);            
             this.groupBox103.Location = new System.Drawing.Point(350, 19);
             this.groupBox103.Name = "groupBox103";
             this.groupBox103.Size = new System.Drawing.Size(201, 82);
@@ -1657,17 +1585,7 @@
             this.TextBoxWatchdogAddressLOGO15.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO15.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO15.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO15_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO15
-            // 
-            this.CheckBoxWatchdogENLOGO15.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO15.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO15.Name = "CheckBoxWatchdogENLOGO15";
-            this.CheckBoxWatchdogENLOGO15.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO15.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO15.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO15.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO15.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO15_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO15
             // 
@@ -1793,6 +1711,7 @@
             // 
             this.TextBoxRWcycLOGO14.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO14.Name = "TextBoxRWcycLOGO14";
+            this.TextBoxRWcycLOGO14.ReadOnly = true;
             this.TextBoxRWcycLOGO14.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO14.TabIndex = 0;
             this.TextBoxRWcycLOGO14.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO14_TextChanged);
@@ -1802,8 +1721,7 @@
             this.groupBox95.Controls.Add(this.label58);
             this.groupBox95.Controls.Add(this.labelWatchdogRuning14);
             this.groupBox95.Controls.Add(this.label60);
-            this.groupBox95.Controls.Add(this.TextBoxWatchdogAddressLOGO14);
-            this.groupBox95.Controls.Add(this.CheckBoxWatchdogENLOGO14);
+            this.groupBox95.Controls.Add(this.TextBoxWatchdogAddressLOGO14);          
             this.groupBox95.Location = new System.Drawing.Point(350, 19);
             this.groupBox95.Name = "groupBox95";
             this.groupBox95.Size = new System.Drawing.Size(201, 82);
@@ -1845,17 +1763,7 @@
             this.TextBoxWatchdogAddressLOGO14.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO14.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO14.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO14_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO14
-            // 
-            this.CheckBoxWatchdogENLOGO14.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO14.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO14.Name = "CheckBoxWatchdogENLOGO14";
-            this.CheckBoxWatchdogENLOGO14.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO14.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO14.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO14.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO14.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO14_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO14
             // 
@@ -1981,6 +1889,7 @@
             // 
             this.TextBoxRWcycLOGO13.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO13.Name = "TextBoxRWcycLOGO13";
+            this.TextBoxRWcycLOGO13.ReadOnly = true;
             this.TextBoxRWcycLOGO13.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO13.TabIndex = 0;
             this.TextBoxRWcycLOGO13.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO13_TextChanged);
@@ -1990,8 +1899,7 @@
             this.groupBox87.Controls.Add(this.label53);
             this.groupBox87.Controls.Add(this.labelWatchdogRuning13);
             this.groupBox87.Controls.Add(this.label55);
-            this.groupBox87.Controls.Add(this.TextBoxWatchdogAddressLOGO13);
-            this.groupBox87.Controls.Add(this.CheckBoxWatchdogENLOGO13);
+            this.groupBox87.Controls.Add(this.TextBoxWatchdogAddressLOGO13);           
             this.groupBox87.Location = new System.Drawing.Point(350, 19);
             this.groupBox87.Name = "groupBox87";
             this.groupBox87.Size = new System.Drawing.Size(201, 82);
@@ -2033,17 +1941,7 @@
             this.TextBoxWatchdogAddressLOGO13.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO13.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO13.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO13_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO13
-            // 
-            this.CheckBoxWatchdogENLOGO13.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO13.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO13.Name = "CheckBoxWatchdogENLOGO13";
-            this.CheckBoxWatchdogENLOGO13.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO13.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO13.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO13.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO13.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO13_CheckedChanged);
+          
             // 
             // BtnDisconnectLOGO13
             // 
@@ -2169,6 +2067,7 @@
             // 
             this.TextBoxRWcycLOGO12.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO12.Name = "TextBoxRWcycLOGO12";
+            this.TextBoxRWcycLOGO12.ReadOnly = true;
             this.TextBoxRWcycLOGO12.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO12.TabIndex = 0;
             this.TextBoxRWcycLOGO12.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO12_TextChanged);
@@ -2178,8 +2077,7 @@
             this.groupBox79.Controls.Add(this.label48);
             this.groupBox79.Controls.Add(this.labelWatchdogRuning12);
             this.groupBox79.Controls.Add(this.label50);
-            this.groupBox79.Controls.Add(this.TextBoxWatchdogAddressLOGO12);
-            this.groupBox79.Controls.Add(this.CheckBoxWatchdogENLOGO12);
+            this.groupBox79.Controls.Add(this.TextBoxWatchdogAddressLOGO12);           
             this.groupBox79.Location = new System.Drawing.Point(350, 19);
             this.groupBox79.Name = "groupBox79";
             this.groupBox79.Size = new System.Drawing.Size(201, 82);
@@ -2221,17 +2119,7 @@
             this.TextBoxWatchdogAddressLOGO12.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO12.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO12.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO12_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO12
-            // 
-            this.CheckBoxWatchdogENLOGO12.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO12.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO12.Name = "CheckBoxWatchdogENLOGO12";
-            this.CheckBoxWatchdogENLOGO12.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO12.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO12.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO12.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO12.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO12_CheckedChanged);
+            
             // 
             // BtnDisconnectLOGO12
             // 
@@ -2357,6 +2245,7 @@
             // 
             this.TextBoxRWcycLOGO11.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO11.Name = "TextBoxRWcycLOGO11";
+            this.TextBoxRWcycLOGO11.ReadOnly = true;
             this.TextBoxRWcycLOGO11.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO11.TabIndex = 0;
             this.TextBoxRWcycLOGO11.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO11_TextChanged);
@@ -2366,8 +2255,7 @@
             this.groupBox71.Controls.Add(this.label43);
             this.groupBox71.Controls.Add(this.labelWatchdogRuning11);
             this.groupBox71.Controls.Add(this.label45);
-            this.groupBox71.Controls.Add(this.TextBoxWatchdogAddressLOGO11);
-            this.groupBox71.Controls.Add(this.CheckBoxWatchdogENLOGO11);
+            this.groupBox71.Controls.Add(this.TextBoxWatchdogAddressLOGO11);            
             this.groupBox71.Location = new System.Drawing.Point(350, 19);
             this.groupBox71.Name = "groupBox71";
             this.groupBox71.Size = new System.Drawing.Size(201, 82);
@@ -2409,17 +2297,7 @@
             this.TextBoxWatchdogAddressLOGO11.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO11.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO11.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO11_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO11
-            // 
-            this.CheckBoxWatchdogENLOGO11.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO11.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO11.Name = "CheckBoxWatchdogENLOGO11";
-            this.CheckBoxWatchdogENLOGO11.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO11.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO11.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO11.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO11.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO11_CheckedChanged);
+            
             // 
             // BtnDisconnectLOGO11
             // 
@@ -2545,6 +2423,7 @@
             // 
             this.TextBoxRWcycLOGO10.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO10.Name = "TextBoxRWcycLOGO10";
+            this.TextBoxRWcycLOGO10.ReadOnly = true;
             this.TextBoxRWcycLOGO10.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO10.TabIndex = 0;
             this.TextBoxRWcycLOGO10.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO10_TextChanged);
@@ -2554,8 +2433,7 @@
             this.groupBox63.Controls.Add(this.label38);
             this.groupBox63.Controls.Add(this.labelWatchdogRuning10);
             this.groupBox63.Controls.Add(this.label40);
-            this.groupBox63.Controls.Add(this.TextBoxWatchdogAddressLOGO10);
-            this.groupBox63.Controls.Add(this.CheckBoxWatchdogENLOGO10);
+            this.groupBox63.Controls.Add(this.TextBoxWatchdogAddressLOGO10);           
             this.groupBox63.Location = new System.Drawing.Point(350, 19);
             this.groupBox63.Name = "groupBox63";
             this.groupBox63.Size = new System.Drawing.Size(201, 82);
@@ -2597,17 +2475,7 @@
             this.TextBoxWatchdogAddressLOGO10.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO10.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO10.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO10_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO10
-            // 
-            this.CheckBoxWatchdogENLOGO10.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO10.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO10.Name = "CheckBoxWatchdogENLOGO10";
-            this.CheckBoxWatchdogENLOGO10.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO10.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO10.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO10.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO10.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO10_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO10
             // 
@@ -2733,6 +2601,7 @@
             // 
             this.TextBoxRWcycLOGO9.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO9.Name = "TextBoxRWcycLOGO9";
+            this.TextBoxRWcycLOGO9.ReadOnly = true;
             this.TextBoxRWcycLOGO9.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO9.TabIndex = 0;
             this.TextBoxRWcycLOGO9.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO9_TextChanged);
@@ -2742,8 +2611,7 @@
             this.groupBox55.Controls.Add(this.label33);
             this.groupBox55.Controls.Add(this.labelWatchdogRuning9);
             this.groupBox55.Controls.Add(this.label35);
-            this.groupBox55.Controls.Add(this.TextBoxWatchdogAddressLOGO9);
-            this.groupBox55.Controls.Add(this.CheckBoxWatchdogENLOGO9);
+            this.groupBox55.Controls.Add(this.TextBoxWatchdogAddressLOGO9);           
             this.groupBox55.Location = new System.Drawing.Point(350, 19);
             this.groupBox55.Name = "groupBox55";
             this.groupBox55.Size = new System.Drawing.Size(201, 82);
@@ -2785,17 +2653,7 @@
             this.TextBoxWatchdogAddressLOGO9.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO9.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO9.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO9_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO9
-            // 
-            this.CheckBoxWatchdogENLOGO9.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO9.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO9.Name = "CheckBoxWatchdogENLOGO9";
-            this.CheckBoxWatchdogENLOGO9.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO9.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO9.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO9.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO9.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO9_CheckedChanged);
+          
             // 
             // BtnDisconnectLOGO9
             // 
@@ -2921,6 +2779,7 @@
             // 
             this.TextBoxRWcycLOGO8.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO8.Name = "TextBoxRWcycLOGO8";
+            this.TextBoxRWcycLOGO8.ReadOnly = true;
             this.TextBoxRWcycLOGO8.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO8.TabIndex = 0;
             this.TextBoxRWcycLOGO8.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO8_TextChanged);
@@ -2930,8 +2789,7 @@
             this.groupBox151.Controls.Add(this.label93);
             this.groupBox151.Controls.Add(this.labelWatchdogRuning8);
             this.groupBox151.Controls.Add(this.label95);
-            this.groupBox151.Controls.Add(this.TextBoxWatchdogAddressLOGO8);
-            this.groupBox151.Controls.Add(this.CheckBoxWatchdogENLOGO8);
+            this.groupBox151.Controls.Add(this.TextBoxWatchdogAddressLOGO8);           
             this.groupBox151.Location = new System.Drawing.Point(350, 19);
             this.groupBox151.Name = "groupBox151";
             this.groupBox151.Size = new System.Drawing.Size(201, 82);
@@ -2973,17 +2831,7 @@
             this.TextBoxWatchdogAddressLOGO8.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO8.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO8.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO8_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO8
-            // 
-            this.CheckBoxWatchdogENLOGO8.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO8.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO8.Name = "CheckBoxWatchdogENLOGO8";
-            this.CheckBoxWatchdogENLOGO8.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO8.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO8.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO8.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO8.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO8_CheckedChanged);
+          
             // 
             // BtnDisconnectLOGO8
             // 
@@ -3109,6 +2957,7 @@
             // 
             this.TextBoxRWcycLOGO7.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO7.Name = "TextBoxRWcycLOGO7";
+            this.TextBoxRWcycLOGO7.ReadOnly = true;
             this.TextBoxRWcycLOGO7.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO7.TabIndex = 0;
             this.TextBoxRWcycLOGO7.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO7_TextChanged);
@@ -3118,8 +2967,7 @@
             this.groupBox47.Controls.Add(this.label28);
             this.groupBox47.Controls.Add(this.labelWatchdogRuning7);
             this.groupBox47.Controls.Add(this.label30);
-            this.groupBox47.Controls.Add(this.TextBoxWatchdogAddressLOGO7);
-            this.groupBox47.Controls.Add(this.CheckBoxWatchdogENLOGO7);
+            this.groupBox47.Controls.Add(this.TextBoxWatchdogAddressLOGO7);          
             this.groupBox47.Location = new System.Drawing.Point(350, 19);
             this.groupBox47.Name = "groupBox47";
             this.groupBox47.Size = new System.Drawing.Size(201, 82);
@@ -3161,17 +3009,7 @@
             this.TextBoxWatchdogAddressLOGO7.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO7.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO7.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO7_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO7
-            // 
-            this.CheckBoxWatchdogENLOGO7.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO7.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO7.Name = "CheckBoxWatchdogENLOGO7";
-            this.CheckBoxWatchdogENLOGO7.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO7.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO7.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO7.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO7.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO7_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO7
             // 
@@ -3297,6 +3135,7 @@
             // 
             this.TextBoxRWcycLOGO6.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO6.Name = "TextBoxRWcycLOGO6";
+            this.TextBoxRWcycLOGO6.ReadOnly = true;
             this.TextBoxRWcycLOGO6.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO6.TabIndex = 0;
             this.TextBoxRWcycLOGO6.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO6_TextChanged);
@@ -3306,8 +3145,7 @@
             this.groupBox39.Controls.Add(this.label23);
             this.groupBox39.Controls.Add(this.labelWatchdogRuning6);
             this.groupBox39.Controls.Add(this.label25);
-            this.groupBox39.Controls.Add(this.TextBoxWatchdogAddressLOGO6);
-            this.groupBox39.Controls.Add(this.CheckBoxWatchdogENLOGO6);
+            this.groupBox39.Controls.Add(this.TextBoxWatchdogAddressLOGO6);           
             this.groupBox39.Location = new System.Drawing.Point(350, 19);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Size = new System.Drawing.Size(201, 82);
@@ -3349,17 +3187,7 @@
             this.TextBoxWatchdogAddressLOGO6.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO6.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO6.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO6_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO6
-            // 
-            this.CheckBoxWatchdogENLOGO6.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO6.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO6.Name = "CheckBoxWatchdogENLOGO6";
-            this.CheckBoxWatchdogENLOGO6.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO6.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO6.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO6.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO6.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO6_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO6
             // 
@@ -3485,6 +3313,7 @@
             // 
             this.TextBoxRWcycLOGO5.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO5.Name = "TextBoxRWcycLOGO5";
+            this.TextBoxRWcycLOGO5.ReadOnly = true;
             this.TextBoxRWcycLOGO5.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO5.TabIndex = 0;
             this.TextBoxRWcycLOGO5.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO5_TextChanged);
@@ -3494,8 +3323,7 @@
             this.groupBox31.Controls.Add(this.label18);
             this.groupBox31.Controls.Add(this.labelWatchdogRuning5);
             this.groupBox31.Controls.Add(this.label20);
-            this.groupBox31.Controls.Add(this.TextBoxWatchdogAddressLOGO5);
-            this.groupBox31.Controls.Add(this.CheckBoxWatchdogENLOGO5);
+            this.groupBox31.Controls.Add(this.TextBoxWatchdogAddressLOGO5);           
             this.groupBox31.Location = new System.Drawing.Point(350, 19);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(201, 82);
@@ -3537,17 +3365,7 @@
             this.TextBoxWatchdogAddressLOGO5.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO5.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO5.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO5_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO5
-            // 
-            this.CheckBoxWatchdogENLOGO5.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO5.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO5.Name = "CheckBoxWatchdogENLOGO5";
-            this.CheckBoxWatchdogENLOGO5.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO5.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO5.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO5.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO5.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO5_CheckedChanged);
+          
             // 
             // BtnDisconnectLOGO5
             // 
@@ -3673,6 +3491,7 @@
             // 
             this.TextBoxRWcycLOGO4.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO4.Name = "TextBoxRWcycLOGO4";
+            this.TextBoxRWcycLOGO4.ReadOnly = true;
             this.TextBoxRWcycLOGO4.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO4.TabIndex = 0;
             this.TextBoxRWcycLOGO4.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO4_TextChanged);
@@ -3682,8 +3501,7 @@
             this.groupBox23.Controls.Add(this.label13);
             this.groupBox23.Controls.Add(this.labelWatchdogRuning4);
             this.groupBox23.Controls.Add(this.label15);
-            this.groupBox23.Controls.Add(this.TextBoxWatchdogAddressLOGO4);
-            this.groupBox23.Controls.Add(this.CheckBoxWatchdogENLOGO4);
+            this.groupBox23.Controls.Add(this.TextBoxWatchdogAddressLOGO4);          
             this.groupBox23.Location = new System.Drawing.Point(350, 19);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(201, 82);
@@ -3725,17 +3543,7 @@
             this.TextBoxWatchdogAddressLOGO4.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO4.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO4.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO4_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO4
-            // 
-            this.CheckBoxWatchdogENLOGO4.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO4.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO4.Name = "CheckBoxWatchdogENLOGO4";
-            this.CheckBoxWatchdogENLOGO4.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO4.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO4.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO4.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO4.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO4_CheckedChanged);
+          
             // 
             // BtnDisconnectLOGO4
             // 
@@ -3861,6 +3669,7 @@
             // 
             this.TextBoxRWcycLOGO3.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO3.Name = "TextBoxRWcycLOGO3";
+            this.TextBoxRWcycLOGO3.ReadOnly = true;
             this.TextBoxRWcycLOGO3.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO3.TabIndex = 0;
             this.TextBoxRWcycLOGO3.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO3_TextChanged);
@@ -3870,8 +3679,7 @@
             this.groupBox15.Controls.Add(this.label8);
             this.groupBox15.Controls.Add(this.labelWatchdogRuning3);
             this.groupBox15.Controls.Add(this.label10);
-            this.groupBox15.Controls.Add(this.TextBoxWatchdogAddressLOGO3);
-            this.groupBox15.Controls.Add(this.CheckBoxWatchdogENLOGO3);
+            this.groupBox15.Controls.Add(this.TextBoxWatchdogAddressLOGO3);            
             this.groupBox15.Location = new System.Drawing.Point(350, 19);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(201, 82);
@@ -3913,17 +3721,7 @@
             this.TextBoxWatchdogAddressLOGO3.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO3.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO3.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO3_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO3
-            // 
-            this.CheckBoxWatchdogENLOGO3.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO3.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO3.Name = "CheckBoxWatchdogENLOGO3";
-            this.CheckBoxWatchdogENLOGO3.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO3.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO3.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO3.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO3.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO3_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO3
             // 
@@ -4049,6 +3847,7 @@
             // 
             this.TextBoxRWcycLOGO2.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO2.Name = "TextBoxRWcycLOGO2";
+            this.TextBoxRWcycLOGO2.ReadOnly = true;
             this.TextBoxRWcycLOGO2.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO2.TabIndex = 0;
             this.TextBoxRWcycLOGO2.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO2_TextChanged);
@@ -4058,8 +3857,7 @@
             this.groupBox7.Controls.Add(this.label3);
             this.groupBox7.Controls.Add(this.labelWatchdogRuning2);
             this.groupBox7.Controls.Add(this.label5);
-            this.groupBox7.Controls.Add(this.TextBoxWatchdogAddressLOGO2);
-            this.groupBox7.Controls.Add(this.CheckBoxWatchdogENLOGO2);
+            this.groupBox7.Controls.Add(this.TextBoxWatchdogAddressLOGO2);           
             this.groupBox7.Location = new System.Drawing.Point(350, 19);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(201, 82);
@@ -4101,17 +3899,7 @@
             this.TextBoxWatchdogAddressLOGO2.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO2.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO2.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO2_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO2
-            // 
-            this.CheckBoxWatchdogENLOGO2.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO2.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO2.Name = "CheckBoxWatchdogENLOGO2";
-            this.CheckBoxWatchdogENLOGO2.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO2.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO2.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO2.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO2.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO2_CheckedChanged);
+           
             // 
             // BtnDisconnectLOGO2
             // 
@@ -4238,6 +4026,7 @@
             // 
             this.TextBoxRWcycLOGO1.Location = new System.Drawing.Point(6, 19);
             this.TextBoxRWcycLOGO1.Name = "TextBoxRWcycLOGO1";
+            this.TextBoxRWcycLOGO1.ReadOnly = true;
             this.TextBoxRWcycLOGO1.Size = new System.Drawing.Size(69, 20);
             this.TextBoxRWcycLOGO1.TabIndex = 0;
             this.TextBoxRWcycLOGO1.TextChanged += new System.EventHandler(this.TextBoxRWcycLOGO1_TextChanged);
@@ -4247,8 +4036,7 @@
             this.groupBoxConnectionWD1.Controls.Add(this.labelExample1);
             this.groupBoxConnectionWD1.Controls.Add(this.labelWatchdogRuning1);
             this.groupBoxConnectionWD1.Controls.Add(this.labelAddressWD1);
-            this.groupBoxConnectionWD1.Controls.Add(this.TextBoxWatchdogAddressLOGO1);
-            this.groupBoxConnectionWD1.Controls.Add(this.CheckBoxWatchdogENLOGO1);
+            this.groupBoxConnectionWD1.Controls.Add(this.TextBoxWatchdogAddressLOGO1);           
             this.groupBoxConnectionWD1.Location = new System.Drawing.Point(350, 19);
             this.groupBoxConnectionWD1.Name = "groupBoxConnectionWD1";
             this.groupBoxConnectionWD1.Size = new System.Drawing.Size(201, 82);
@@ -4290,17 +4078,7 @@
             this.TextBoxWatchdogAddressLOGO1.Size = new System.Drawing.Size(50, 20);
             this.TextBoxWatchdogAddressLOGO1.TabIndex = 8;
             this.TextBoxWatchdogAddressLOGO1.TextChanged += new System.EventHandler(this.TextBoxWatchdogAddressLOGO1_TextChanged);
-            // 
-            // CheckBoxWatchdogENLOGO1
-            // 
-            this.CheckBoxWatchdogENLOGO1.AutoSize = true;
-            this.CheckBoxWatchdogENLOGO1.Location = new System.Drawing.Point(6, 19);
-            this.CheckBoxWatchdogENLOGO1.Name = "CheckBoxWatchdogENLOGO1";
-            this.CheckBoxWatchdogENLOGO1.Size = new System.Drawing.Size(115, 17);
-            this.CheckBoxWatchdogENLOGO1.TabIndex = 5;
-            this.CheckBoxWatchdogENLOGO1.Text = "WatchdogEnabled";
-            this.CheckBoxWatchdogENLOGO1.UseVisualStyleBackColor = true;
-            this.CheckBoxWatchdogENLOGO1.CheckedChanged += new System.EventHandler(this.CheckBoxWatchdogENLOGO1_CheckedChanged);
+            
             // 
             // BtnDisconnectLOGO1
             // 
@@ -5292,8 +5070,7 @@
         private System.Windows.Forms.Label label88;
         public System.Windows.Forms.Label labelWatchdogRuning20;
         private System.Windows.Forms.Label label90;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO20;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO20;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO20;       
         public System.Windows.Forms.Button BtnDisconnectLOGO20;
         private System.Windows.Forms.GroupBox groupBox144;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO20;
@@ -5311,8 +5088,7 @@
         private System.Windows.Forms.Label label83;
         public System.Windows.Forms.Label labelWatchdogRuning19;
         private System.Windows.Forms.Label label85;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO19;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO19;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO19;       
         public System.Windows.Forms.Button BtnDisconnectLOGO19;
         private System.Windows.Forms.GroupBox groupBox136;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO19;
@@ -5330,8 +5106,7 @@
         private System.Windows.Forms.Label label78;
         public System.Windows.Forms.Label labelWatchdogRuning18;
         private System.Windows.Forms.Label label80;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO18;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO18;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO18;        
         public System.Windows.Forms.Button BtnDisconnectLOGO18;
         private System.Windows.Forms.GroupBox groupBox128;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO18;
@@ -5349,8 +5124,7 @@
         private System.Windows.Forms.Label label73;
         public System.Windows.Forms.Label labelWatchdogRuning17;
         private System.Windows.Forms.Label label75;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO17;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO17;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO17;       
         public System.Windows.Forms.Button BtnDisconnectLOGO17;
         private System.Windows.Forms.GroupBox groupBox120;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO17;
@@ -5369,7 +5143,6 @@
         public System.Windows.Forms.Label labelWatchdogRuning16;
         private System.Windows.Forms.Label label70;
         public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO16;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO16;
         public System.Windows.Forms.Button BtnDisconnectLOGO16;
         private System.Windows.Forms.GroupBox groupBox112;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO16;
@@ -5387,8 +5160,7 @@
         private System.Windows.Forms.Label label63;
         public System.Windows.Forms.Label labelWatchdogRuning15;
         private System.Windows.Forms.Label label65;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO15;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO15;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO15;       
         public System.Windows.Forms.Button BtnDisconnectLOGO15;
         private System.Windows.Forms.GroupBox groupBox104;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO15;
@@ -5406,8 +5178,7 @@
         private System.Windows.Forms.Label label58;
         public System.Windows.Forms.Label labelWatchdogRuning14;
         private System.Windows.Forms.Label label60;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO14;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO14;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO14;       
         public System.Windows.Forms.Button BtnDisconnectLOGO14;
         private System.Windows.Forms.GroupBox groupBox96;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO14;
@@ -5425,8 +5196,7 @@
         private System.Windows.Forms.Label label53;
         public System.Windows.Forms.Label labelWatchdogRuning13;
         private System.Windows.Forms.Label label55;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO13;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO13;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO13;      
         public System.Windows.Forms.Button BtnDisconnectLOGO13;
         private System.Windows.Forms.GroupBox groupBox88;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO13;
@@ -5444,8 +5214,7 @@
         private System.Windows.Forms.Label label48;
         public System.Windows.Forms.Label labelWatchdogRuning12;
         private System.Windows.Forms.Label label50;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO12;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO12;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO12;      
         public System.Windows.Forms.Button BtnDisconnectLOGO12;
         private System.Windows.Forms.GroupBox groupBox80;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO12;
@@ -5463,8 +5232,7 @@
         private System.Windows.Forms.Label label43;
         public System.Windows.Forms.Label labelWatchdogRuning11;
         private System.Windows.Forms.Label label45;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO11;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO11;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO11;       
         public System.Windows.Forms.Button BtnDisconnectLOGO11;
         private System.Windows.Forms.GroupBox groupBox72;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO11;
@@ -5482,8 +5250,7 @@
         private System.Windows.Forms.Label label38;
         public System.Windows.Forms.Label labelWatchdogRuning10;
         private System.Windows.Forms.Label label40;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO10;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO10;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO10;      
         public System.Windows.Forms.Button BtnDisconnectLOGO10;
         private System.Windows.Forms.GroupBox groupBox64;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO10;
@@ -5501,8 +5268,7 @@
         private System.Windows.Forms.Label label33;
         public System.Windows.Forms.Label labelWatchdogRuning9;
         private System.Windows.Forms.Label label35;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO9;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO9;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO9;       
         public System.Windows.Forms.Button BtnDisconnectLOGO9;
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO9;
@@ -5520,8 +5286,7 @@
         private System.Windows.Forms.Label label93;
         public System.Windows.Forms.Label labelWatchdogRuning8;
         private System.Windows.Forms.Label label95;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO8;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO8;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO8;      
         public System.Windows.Forms.Button BtnDisconnectLOGO8;
         private System.Windows.Forms.GroupBox groupBox152;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO8;
@@ -5539,8 +5304,7 @@
         private System.Windows.Forms.Label label28;
         public System.Windows.Forms.Label labelWatchdogRuning7;
         private System.Windows.Forms.Label label30;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO7;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO7;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO7;       
         public System.Windows.Forms.Button BtnDisconnectLOGO7;
         private System.Windows.Forms.GroupBox groupBox48;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO7;
@@ -5558,8 +5322,7 @@
         private System.Windows.Forms.Label label23;
         public System.Windows.Forms.Label labelWatchdogRuning6;
         private System.Windows.Forms.Label label25;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO6;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO6;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO6;       
         public System.Windows.Forms.Button BtnDisconnectLOGO6;
         private System.Windows.Forms.GroupBox groupBox40;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO6;
@@ -5577,8 +5340,7 @@
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.Label labelWatchdogRuning5;
         private System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO5;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO5;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO5;       
         public System.Windows.Forms.Button BtnDisconnectLOGO5;
         private System.Windows.Forms.GroupBox groupBox32;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO5;
@@ -5596,8 +5358,7 @@
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label labelWatchdogRuning4;
         private System.Windows.Forms.Label label15;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO4;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO4;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO4;        
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO4;
         private System.Windows.Forms.GroupBox groupBox25;
@@ -5613,8 +5374,7 @@
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label labelWatchdogRuning3;
         private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO3;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO3;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO3;        
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO3;
         private System.Windows.Forms.GroupBox groupBox17;
@@ -5630,8 +5390,7 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label labelWatchdogRuning2;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO2;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO2;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO2;       
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO2;
         private System.Windows.Forms.GroupBox groupBox9;
@@ -5647,8 +5406,7 @@
         private System.Windows.Forms.Label labelExample1;
         public System.Windows.Forms.Label labelWatchdogRuning1;
         private System.Windows.Forms.Label labelAddressWD1;
-        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO1;
-        public System.Windows.Forms.CheckBox CheckBoxWatchdogENLOGO1;
+        public System.Windows.Forms.TextBox TextBoxWatchdogAddressLOGO1;       
         private System.Windows.Forms.GroupBox groupBoxRemoteTSAP1;
         private System.Windows.Forms.TextBox textBoxRemoteTSAPLOGO1;
         private System.Windows.Forms.GroupBox groupBoxLocalTSAP1;

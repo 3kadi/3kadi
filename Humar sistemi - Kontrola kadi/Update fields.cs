@@ -20,30 +20,8 @@ namespace KontrolaKadi
             try
             {                
                 var root = XML_handler.settingsXML.Element("root");
-
-                UpdateFieldsLOGO1(root.Element("LOGO1"));
-                UpdateFieldsLOGO2(root.Element("LOGO2"));
-                UpdateFieldsLOGO3(root.Element("LOGO3"));
-                UpdateFieldsLOGO4(root.Element("LOGO4"));
-                UpdateFieldsLOGO5(root.Element("LOGO5"));
-                UpdateFieldsLOGO6(root.Element("LOGO6"));
-                UpdateFieldsLOGO7(root.Element("LOGO7"));
-                UpdateFieldsLOGO8(root.Element("LOGO8"));
-                UpdateFieldsLOGO9(root.Element("LOGO9"));
-                UpdateFieldsLOGO10(root.Element("LOGO10"));
-                UpdateFieldsLOGO11(root.Element("LOGO11"));
-                UpdateFieldsLOGO12(root.Element("LOGO12"));
-                UpdateFieldsLOGO13(root.Element("LOGO13"));
-                UpdateFieldsLOGO14(root.Element("LOGO14"));
-                UpdateFieldsLOGO15(root.Element("LOGO15"));
-                UpdateFieldsLOGO16(root.Element("LOGO16"));
-                UpdateFieldsLOGO17(root.Element("LOGO17"));
-                UpdateFieldsLOGO18(root.Element("LOGO18"));
-                UpdateFieldsLOGO19(root.Element("LOGO19"));
-                UpdateFieldsLOGO20(root.Element("LOGO20"));
-
-
-                FormControl.bt1.WL("Configuration was reloaded from XML file", 0);
+                                
+                UpdateFieldsAll();
 
                 #region find duplicates
                 List<string> IPs = new List<string>();
@@ -128,12 +106,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO1.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[1].RemoteTSAP = textBoxRemoteTSAPLOGO1.Text;
 
-            CheckBoxWatchdogENLOGO1.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO1.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO1.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); }
 
         }
 
@@ -150,12 +128,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO2.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[2].RemoteTSAP = textBoxRemoteTSAPLOGO2.Text;
 
-            CheckBoxWatchdogENLOGO2.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO2.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO2.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -172,12 +150,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO3.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[3].RemoteTSAP = textBoxRemoteTSAPLOGO3.Text;
 
-            CheckBoxWatchdogENLOGO3.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO3.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO3.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -194,12 +172,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO4.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[4].RemoteTSAP = textBoxRemoteTSAPLOGO4.Text;
 
-            CheckBoxWatchdogENLOGO4.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO4.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO4.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -216,12 +194,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO5.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[5].RemoteTSAP = textBoxRemoteTSAPLOGO5.Text;
 
-            CheckBoxWatchdogENLOGO5.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO5.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO5.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
         }
 
         private void UpdateFieldsLOGO6(Linq.XElement config)
@@ -239,12 +217,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO6.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[6].RemoteTSAP = textBoxRemoteTSAPLOGO6.Text;
 
-            CheckBoxWatchdogENLOGO6.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO6.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO6.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
         }
 
         private void UpdateFieldsLOGO7(Linq.XElement config)
@@ -262,12 +240,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO7.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[7].RemoteTSAP = textBoxRemoteTSAPLOGO7.Text;
 
-            CheckBoxWatchdogENLOGO7.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO7.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO7.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -284,12 +262,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO8.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[8].RemoteTSAP = textBoxRemoteTSAPLOGO8.Text;
 
-            CheckBoxWatchdogENLOGO8.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO8.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO8.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -306,12 +284,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO9.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[9].RemoteTSAP = textBoxRemoteTSAPLOGO9.Text;
 
-            CheckBoxWatchdogENLOGO9.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO9.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO9.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -328,12 +306,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO10.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[10].RemoteTSAP = textBoxRemoteTSAPLOGO10.Text;
 
-            CheckBoxWatchdogENLOGO10.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO10.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO10.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -350,12 +328,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO11.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[11].RemoteTSAP = textBoxRemoteTSAPLOGO11.Text;
 
-            CheckBoxWatchdogENLOGO11.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO11.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO11.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -372,12 +350,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO12.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[12].RemoteTSAP = textBoxRemoteTSAPLOGO12.Text;
 
-            CheckBoxWatchdogENLOGO12.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO12.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO12.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -394,12 +372,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO13.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[13].RemoteTSAP = textBoxRemoteTSAPLOGO13.Text;
 
-            CheckBoxWatchdogENLOGO13.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO13.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO13.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -416,12 +394,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO14.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[14].RemoteTSAP = textBoxRemoteTSAPLOGO14.Text;
 
-            CheckBoxWatchdogENLOGO14.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO14.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO14.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -438,12 +416,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO15.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[15].RemoteTSAP = textBoxRemoteTSAPLOGO15.Text;
 
-            CheckBoxWatchdogENLOGO15.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO15.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO15.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -460,12 +438,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO16.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[16].RemoteTSAP = textBoxRemoteTSAPLOGO16.Text;
 
-            CheckBoxWatchdogENLOGO16.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO16.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO16.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -482,12 +460,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO17.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[17].RemoteTSAP = textBoxRemoteTSAPLOGO17.Text;
 
-            CheckBoxWatchdogENLOGO17.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO17.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO17.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -504,12 +482,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO18.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[18].RemoteTSAP = textBoxRemoteTSAPLOGO18.Text;
 
-            CheckBoxWatchdogENLOGO18.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO18.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO18.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -526,12 +504,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO19.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[19].RemoteTSAP = textBoxRemoteTSAPLOGO19.Text;
 
-            CheckBoxWatchdogENLOGO19.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO19.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO19.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
 
         }
 
@@ -548,12 +526,12 @@ namespace KontrolaKadi
             textBoxRemoteTSAPLOGO20.Text = config.Element("remoteTSAP").Value.Replace("\"", "");
             FormControl.bt1.LOGOConnection[20].RemoteTSAP = textBoxRemoteTSAPLOGO20.Text;
 
-            CheckBoxWatchdogENLOGO20.Checked = Convert.ToBoolean(config.Element("watchdogEN").Value.Replace("\"", ""));
+            
 
             TextBoxWatchdogAddressLOGO20.Text = config.Element("watchdogAddress").Value.Replace("\"", "");
             TextBoxRWcycLOGO20.Text = config.Element("ReadWriteCycle").Value.Replace("\"", "");
 
-            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false"); config.Save(textBoxPathXML.Text); }
+            if (!Convert.ToBoolean(config.Element("show").Value.Replace("\"", ""))) { config.Element("enabled").SetValue("false");   }
             
         }
 
@@ -561,6 +539,31 @@ namespace KontrolaKadi
 
         #endregion UPDATE_FIELDS
 
+        public void UpdateFieldsAll()
+        {
+            var root = XML_handler.settingsXML.Element("root");
+
+            UpdateFieldsLOGO1(root.Element("LOGO1"));
+            UpdateFieldsLOGO2(root.Element("LOGO2"));
+            UpdateFieldsLOGO3(root.Element("LOGO3"));
+            UpdateFieldsLOGO4(root.Element("LOGO4"));
+            UpdateFieldsLOGO5(root.Element("LOGO5"));
+            UpdateFieldsLOGO6(root.Element("LOGO6"));
+            UpdateFieldsLOGO7(root.Element("LOGO7"));
+            UpdateFieldsLOGO8(root.Element("LOGO8"));
+            UpdateFieldsLOGO9(root.Element("LOGO9"));
+            UpdateFieldsLOGO10(root.Element("LOGO10"));
+            UpdateFieldsLOGO11(root.Element("LOGO11"));
+            UpdateFieldsLOGO12(root.Element("LOGO12"));
+            UpdateFieldsLOGO13(root.Element("LOGO13"));
+            UpdateFieldsLOGO14(root.Element("LOGO14"));
+            UpdateFieldsLOGO15(root.Element("LOGO15"));
+            UpdateFieldsLOGO16(root.Element("LOGO16"));
+            UpdateFieldsLOGO17(root.Element("LOGO17"));
+            UpdateFieldsLOGO18(root.Element("LOGO18"));
+            UpdateFieldsLOGO19(root.Element("LOGO19"));
+            UpdateFieldsLOGO20(root.Element("LOGO20"));
+        }
         
 
     }
