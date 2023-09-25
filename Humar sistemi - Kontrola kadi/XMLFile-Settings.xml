@@ -2200,7 +2200,7 @@
 		  //
 		  </USERS>//
 		  <STATS>//
-			<kwhTotal>39416,6</kwhTotal>				// Skupna poraba v kWh
+			<kwhTotal>39419,1</kwhTotal>				// Skupna poraba v kWh
 			<hTotal>12</hTotal>						// Skupen čas delovanja (ko je GUI aktiven in je poraba več kot 0W)			
 		  </STATS>//
 	</root>
