@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humar sistemi - Kontrola kadi", "Humar sistemi - Kontrola kadi\Humar sistemi - Kontrola kadi.csproj", "{73F98301-4DDD-485C-B984-6A576CD2AC81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 kadi", "Humar sistemi - Kontrola kadi\3 kadi.csproj", "{73F98301-4DDD-485C-B984-6A576CD2AC81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

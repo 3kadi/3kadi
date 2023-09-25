@@ -598,6 +598,7 @@ namespace KontrolaKadi
                     
                     case 19:
                         buff1 = f.Prop8.Temperatura119.Value;
+                        buff2 = f.Prop8.Temperatura219.Value;
                         buff4 = f.Prop8.Alarmzatemperaturo19.Value.ToString();
                         buff6 = f.Prop8.Nivo19.Value.ToString();
                         break;

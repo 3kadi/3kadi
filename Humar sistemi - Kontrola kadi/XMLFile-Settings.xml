@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root> // Please close program before editing this document! In other case changes might be overwritten
-  <GENERAL><logFilePath>H:\_Dev\3kadi-master\Humar sistemi - Kontrola kadi\Log.txt</logFilePath> // TXT Log
-		<UserActionsFilePath>H:\_Dev\3kadi-master\Humar sistemi - Kontrola kadi\UserActions.csv</UserActionsFilePath> // CSV Log of user actions
-		<TemperatureLogFilePath>H:\_Dev\3kadi-master\Humar sistemi - Kontrola kadi\Temperature History.csv</TemperatureLogFilePath> // CSV Log of temperatures
-		<SarzaLogFolderPath>H:\_Dev\3kadi-master\Logs</SarzaLogFolderPath> //  Logi - Saržno orientirani
+  <GENERAL><logFilePath>C:\Users\Kontrola Kadi\Desktop\Google Backup\Kontrola kadi v30\Humar sistemi - Kontrola kadi v30\Humar sistemi - Kontrola kadi\Log.txt</logFilePath> // TXT Log
+		<UserActionsFilePath>C:\Users\Kontrola Kadi\Desktop\Google Backup\Kontrola kadi v30\Humar sistemi - Kontrola kadi v30\Humar sistemi - Kontrola kadi\UserActions.csv</UserActionsFilePath> // CSV Log of user actions
+		<TemperatureLogFilePath>C:\Users\Kontrola Kadi\Desktop\Google Backup\Kontrola kadi v30\Humar sistemi - Kontrola kadi v30\Humar sistemi - Kontrola kadi\Temperature History.csv</TemperatureLogFilePath> // CSV Log of temperatures
+		<SarzaLogFolderPath>C:\Users\Kontrola Kadi\Desktop\Log Sarza</SarzaLogFolderPath> //  Logi - Saržno orientirani
 		<SearchEngineRunScript>C:\Scripts_KontrolaKadi\Srch.bat</SearchEngineRunScript>//  Pot do skripta za zagon iskalnika
 		<WatchdogRetries>3</WatchdogRetries>							// how many times watchdog retries to get value from PLC before error is shown and reconection is invoked
 		<AutoConnect>True</AutoConnect>           						// autoconnect at startup
@@ -30,7 +30,7 @@
 			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
 			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
 			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
-			<ChartYto>90</ChartYto>								// Kje se konča Y os
+			<ChartYto>60</ChartYto>								// Kje se konča Y os
 			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
 			<AlertTime1>2</AlertTime1>							// Čas izteka štoparice	[s]		
 			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
@@ -207,7 +207,7 @@
 			</Kad5>
 			//
 			<Kad6>//
-			<Name>E1</Name>										// Ime kadi - napis na kadi
+			<Name>E2</Name>										// Ime kadi - napis na kadi
 			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
 			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
 			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
@@ -225,7 +225,7 @@
 			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
-			<GetTextAtLine2></GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
 			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
@@ -250,7 +250,7 @@
 			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
 			<ChartYto>80</ChartYto>								// Kje se konča Y os
 			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
-			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
+			<AlertTime1>720</AlertTime1>							// Čas izteka štoparice	[s]
 			<PauseTime1>1</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
 			<Processname>Siling</Processname>					// Ime procesa - napis v tabeli
 			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
@@ -315,11 +315,11 @@
 			</Kad8>
 			//
 			<Kad9>//
-			<Name>E2</Name>										// Ime kadi - napis na kadi
+			<Name>E1</Name>										// Ime kadi - napis na kadi
 			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
-			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
+			<HasSchedule>False</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
 			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
-			<ChartYfrom>20</ChartYfrom>							// Od kje se začne Y os
+			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
 			<ChartYto>30</ChartYto>								// Kje se konča Y os
 			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
 			<AlertTime1>82800</AlertTime1>							// Čas izteka štoparice	[s]
@@ -333,7 +333,7 @@
 			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
-			<GetTextAtLine2></GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<GetTextAtLine2>3</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
 			<GetTextAtLine3></GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
@@ -1123,7 +1123,7 @@
 			<ChartYto>60</ChartYto>								// Kje se konča Y os
 			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
 			<AlertTime1>720</AlertTime1>							// Čas izteka štoparice	[s]
-			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
+			<PauseTime1>30</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
 			<Processname>Tesnenje 2</Processname>					// Ime procesa - napis v tabeli
 			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
 			<KadColor>-32704</KadColor>						// Barva kadi 
@@ -1223,7 +1223,7 @@
 			</Kad13>
 			//			
 			<Kad14>//
-			<Name>Č</Name>										// Ime kadi - napis na kadi
+			<Name>Č1</Name>										// Ime kadi - napis na kadi
 			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
 			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
 			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
@@ -1259,19 +1259,19 @@
 			</Kad14>											
 			//		
 			<Kad15>//
-			<Name>HNL</Name>									// Ime kadi - napis na kadi
+			<Name>Č2</Name>									// Ime kadi - napis na kadi
 			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
 			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
 			<ChartType>2</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
 			<ChartYfrom>0</ChartYfrom>							// Od kje se začne Y os
 			<ChartYto>80</ChartYto>								// Kje se konča Y os
 			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
-			<AlertTime1>600</AlertTime1>							// Čas izteka štoparice	[s]
+			<AlertTime1>1140</AlertTime1>							// Čas izteka štoparice	[s]
 			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
-			<Processname>Siva</Processname>					// Ime procesa - napis v tabeli
+			<Processname>Črna</Processname>					// Ime procesa - napis v tabeli
 			<EndOfTimeSignaling>urgent</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
-			<KadColor>-4144960</KadColor>						// Barva kadi 
-			<NameColor>-16777216</NameColor>							// Barva Napisa na kadi 
+			<KadColor>-16777152</KadColor>						// Barva kadi 
+			<NameColor>-1</NameColor>							// Barva Napisa na kadi 
 			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
 			<TypeOf_Kad>3</TypeOf_Kad>					// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;			
 			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
@@ -1402,7 +1402,7 @@
 			</Kad18>
 			//
 			<Kad19>//
-			<Name>RES2</Name>									// Ime kadi - napis na kadi
+			<Name>VS1</Name>									// Ime kadi - napis na kadi
 			<HasStopwatch>True</HasStopwatch>					// Kad ima možnost merjenja časa prisotnosti sarže
 			<HasSchedule>True</HasSchedule>						// Kad ima možnost nastavljanja urnika delovanja
 			<ChartType>1</ChartType>							// Tip Grafa temperatur: 0= Ne prikazuj; 1= samo ena sled/vrednost na grafu; 2= dve sledi/vrednosti na grafu
@@ -1411,23 +1411,23 @@
 			<HasOutDatagrid>True</HasOutDatagrid>				// Prikaži glavno tabelo za prikaz podatkov v glavnem meniju
 			<AlertTime1>5</AlertTime1>							// Čas izteka štoparice	[s]
 			<PauseTime1>60</PauseTime1>							// Čas pavze po odstranitvi sarže [s]. Po preteklem času se sarza zakljuci
-			<Processname>Rezerva2</Processname>					// Ime procesa - napis v tabeli
+			<Processname>Vroče tesnenje</Processname>					// Ime procesa - napis v tabeli
 			<EndOfTimeSignaling>normal</EndOfTimeSignaling>			// način signaliziranja ob poteku štoparice (urgent / normal / none)
-			<KadColor>-1</KadColor>					// Barva kadi 
-			<NameColor>-1</NameColor>					// Barva Napisa na kadi 
+			<KadColor>-16744193</KadColor>					// Barva kadi 
+			<NameColor>-16777216</NameColor>					// Barva Napisa na kadi 
 			<WidthMultiplyer>100</WidthMultiplyer>				// faktor Širine za izris (100 = normalna širina)
 			<TypeOf_Kad>1</TypeOf_Kad>							// Tip kadi:-1= Ni na tem GUI; 0= Ne Prikazuj 1=Klasična ozka; 2= Klasična Poširjena; 3= Dvojna kad;
-			<GetTextAtLine1>2</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<GetTextAtLine1>1</GetTextAtLine1>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine1></OutDatagridPrefixAtLine1>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine1></OutDatagridPostfixAtLine1>	// Nastavi besedilo po vrednosti
-			<GetTextAtLine2>0</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<GetTextAtLine2>2</GetTextAtLine2>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine2></OutDatagridPrefixAtLine2>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine2></OutDatagridPostfixAtLine2>	// Nastavi besedilo po vrednosti
-			<GetTextAtLine3>3</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
-			<OutDatagridPrefixAtLine3>Nivo: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<GetTextAtLine3>4</GetTextAtLine3>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine3>Ogrevanje: </OutDatagridPrefixAtLine3>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine3></OutDatagridPostfixAtLine3>	// Nastavi besedilo po vrednosti
-			<GetTextAtLine4>4</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
-			<OutDatagridPrefixAtLine4>Ogrevanje: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
+			<GetTextAtLine4>2</GetTextAtLine4>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
+			<OutDatagridPrefixAtLine4>PAZI NIVO!: </OutDatagridPrefixAtLine4>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
 			<OutDatagridPostfixAtLine4></OutDatagridPostfixAtLine4>	// Nastavi besedilo po vrednosti
 			<GetTextAtLine5>0</GetTextAtLine5>							// Nastavi s katere vrstice tabele v podmeniju naj vzame vrednost za prikaz v tabeli na glavnem zaslonu
 			<OutDatagridPrefixAtLine5></OutDatagridPrefixAtLine5>	// Nastavi besedilo pred vrednostjo "GetTextAtLineX"
@@ -2200,7 +2200,7 @@
 		  //
 		  </USERS>//
 		  <STATS>//
-			<kwhTotal>38481,5</kwhTotal>				// Skupna poraba v kWh
-			<hTotal>8</hTotal>						// Skupen čas delovanja (ko je GUI aktiven in je poraba več kot 0W)			
+			<kwhTotal>39416,6</kwhTotal>				// Skupna poraba v kWh
+			<hTotal>12</hTotal>						// Skupen čas delovanja (ko je GUI aktiven in je poraba več kot 0W)			
 		  </STATS>//
 	</root>

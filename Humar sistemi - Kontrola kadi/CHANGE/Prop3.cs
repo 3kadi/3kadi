@@ -209,14 +209,14 @@ namespace KontrolaKadi
                 r = datagrid.Rows.Add("Vklop črpalk hl. sist.: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = false;
                 datagrid[1, r] = m2;
 
-                 r = datagrid.Rows.Add("Čas.baza mešal. vent.: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = false;
-                datagrid[1, r] = tms1;
+                 r = datagrid.Rows.Add("Čas.baza mešal. vent.: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
+                //datagrid[1, r] = tms1; // commented out - parameter se nastavlja na LOGO5
 
-                r = datagrid.Rows.Add("Mesalni ventil (+): ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = false;
-                datagrid[1, r] = m3;
+                r = datagrid.Rows.Add("Mesalni ventil (+): ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
+                //datagrid[1, r] = m3;  // commented out - parameter se nastavlja na LOGO5
 
-                r = datagrid.Rows.Add("Mesalni ventil (-): ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = false;
-                datagrid[1, r] = m4;
+                r = datagrid.Rows.Add("Mesalni ventil (-): ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = true;
+                //datagrid[1, r] = m4;  // commented out - parameter se nastavlja na LOGO5
 
                 r = datagrid.Rows.Add("Moč čas.črpalke: ", PropComm.NA); datagrid[0, r].ReadOnly = true; datagrid[1, r].ReadOnly = false;
                 datagrid[1, r] = p1;

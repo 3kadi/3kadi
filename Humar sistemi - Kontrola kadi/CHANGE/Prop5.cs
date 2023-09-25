@@ -328,9 +328,9 @@ namespace KontrolaKadi
                         //CanStartHladSist9.SyncWithPC(Main_datagrid[1, ]);
                         SkupnaPorabaKadi9.SyncWithPC(Main_datagrid[1, 9]);
 
-                        Urniki_CikelAktiven9.SyncWithPC(Statusdatagrid[1, 0]);
-                        TemperaturaAktivnegaCikla9.SyncWithPC(Statusdatagrid[1, 1]);
-                        TemperaturaPasivnegaCikla9.SyncWithPC(Statusdatagrid[1, 2]);
+                        //Urniki_CikelAktiven9.SyncWithPC(Statusdatagrid[1, 0]);
+                        //TemperaturaAktivnegaCikla9.SyncWithPC(Statusdatagrid[1, 1]); // SKIPPED - nastavlja se na LOGO3
+                        //TemperaturaPasivnegaCikla9.SyncWithPC(Statusdatagrid[1, 2]); // SKIPPED - nastavlja se na LOGO3
 
                     }
                 }
@@ -338,29 +338,32 @@ namespace KontrolaKadi
                 {
                     if (Shedule_datagrid.Rows.Count > 0)
                     {
-                        Pon_EN.SyncWithPC(Shedule_datagrid[3, 0]);
-                        Tor_EN.SyncWithPC(Shedule_datagrid[3, 1]);
-                        Sre_EN.SyncWithPC(Shedule_datagrid[3, 2]);
-                        Čet_EN.SyncWithPC(Shedule_datagrid[3, 3]);
-                        Pet_EN.SyncWithPC(Shedule_datagrid[3, 4]);
-                        Sob_EN.SyncWithPC(Shedule_datagrid[3, 5]);
-                        Ned_EN.SyncWithPC(Shedule_datagrid[3, 6]);
 
-                        timeSetD1.SyncWithPC(Shedule_datagrid[1, 0], 1);
-                        timeSetD2.SyncWithPC(Shedule_datagrid[1, 1], 1);
-                        timeSetD3.SyncWithPC(Shedule_datagrid[1, 2], 1);
-                        timeSetD4.SyncWithPC(Shedule_datagrid[1, 3], 1);
-                        timeSetD5.SyncWithPC(Shedule_datagrid[1, 4], 1);
-                        timeSetD6.SyncWithPC(Shedule_datagrid[1, 5], 1);
-                        timeSetD7.SyncWithPC(Shedule_datagrid[1, 6], 1);
+                        // SKIPPED - nastavlja se na LOGO3
 
-                        timeSetP1.SyncWithPC(Shedule_datagrid[2, 0], 1);
-                        timeSetP2.SyncWithPC(Shedule_datagrid[2, 1], 1);
-                        timeSetP3.SyncWithPC(Shedule_datagrid[2, 2], 1);
-                        timeSetP4.SyncWithPC(Shedule_datagrid[2, 3], 1);
-                        timeSetP5.SyncWithPC(Shedule_datagrid[2, 4], 1);
-                        timeSetP6.SyncWithPC(Shedule_datagrid[2, 5], 1);
-                        timeSetP7.SyncWithPC(Shedule_datagrid[2, 6], 1);
+                        //Pon_EN.SyncWithPC(Shedule_datagrid[3, 0]);
+                        //Tor_EN.SyncWithPC(Shedule_datagrid[3, 1]);
+                        //Sre_EN.SyncWithPC(Shedule_datagrid[3, 2]);
+                        //Čet_EN.SyncWithPC(Shedule_datagrid[3, 3]);
+                        //Pet_EN.SyncWithPC(Shedule_datagrid[3, 4]);
+                        //Sob_EN.SyncWithPC(Shedule_datagrid[3, 5]);
+                        //Ned_EN.SyncWithPC(Shedule_datagrid[3, 6]);
+
+                        //timeSetD1.SyncWithPC(Shedule_datagrid[1, 0], 1);
+                        //timeSetD2.SyncWithPC(Shedule_datagrid[1, 1], 1);
+                        //timeSetD3.SyncWithPC(Shedule_datagrid[1, 2], 1);
+                        //timeSetD4.SyncWithPC(Shedule_datagrid[1, 3], 1);
+                        //timeSetD5.SyncWithPC(Shedule_datagrid[1, 4], 1);
+                        //timeSetD6.SyncWithPC(Shedule_datagrid[1, 5], 1);
+                        //timeSetD7.SyncWithPC(Shedule_datagrid[1, 6], 1);
+
+                        //timeSetP1.SyncWithPC(Shedule_datagrid[2, 0], 1);
+                        //timeSetP2.SyncWithPC(Shedule_datagrid[2, 1], 1);
+                        //timeSetP3.SyncWithPC(Shedule_datagrid[2, 2], 1);
+                        //timeSetP4.SyncWithPC(Shedule_datagrid[2, 3], 1);
+                        //timeSetP5.SyncWithPC(Shedule_datagrid[2, 4], 1);
+                        //timeSetP6.SyncWithPC(Shedule_datagrid[2, 5], 1);
+                        //timeSetP7.SyncWithPC(Shedule_datagrid[2, 6], 1);
 
                         // END CHANGE
                                                 

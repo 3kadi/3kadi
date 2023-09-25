@@ -64,6 +64,7 @@ namespace KontrolaKadi
             // GET/SET with plc KAD19
             prop.PrisotnostSarze19.SyncWithPLC();
             prop.Temperatura119.SyncWithPLC();
+            prop.Temperatura219.SyncWithPLC();
             prop.Nivo19.SyncWithPLC();
             prop.DelovanjeGrelca19.SyncWithPLC();
             prop.SkupnaPorabaKadi19.SyncWithPLC();

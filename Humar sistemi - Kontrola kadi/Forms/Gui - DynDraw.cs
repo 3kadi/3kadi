@@ -619,13 +619,13 @@ namespace KontrolaKadi
                         TextRenderer.DrawText(e.Graphics, btnConnected[i].Showname, Misc.MeasureString(e, rectConnName[i], btnConnected[i].Showname, 10, FontStyle.Bold), rectConnName[i], Color.White, TextFormatFlags.HorizontalCenter);
                     }
 
-                    if (FormControl.bt1.Prop1.NapajanjeOK.Value == 1)
+                    if (FormControl.bt1.Prop1.NapajanjeOK.Value == 0)
                     {
-                        MainsErr.Hide();
+                        MainsErr.Show();
                     }
                     else
                     {
-                        MainsErr.Show();
+                        MainsErr.Hide();
                     }
                    
                 }

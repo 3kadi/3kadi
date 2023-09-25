@@ -200,7 +200,7 @@ namespace KontrolaKadi
                     case 14: AddValuesToChart(tmp.Prop6.Temperatura114.Value, tmp.Prop6.Temperatura214.Value); break;
                     case 15: AddValuesToChart(tmp.Prop7.Temperatura115.Value, tmp.Prop7.Temperatura215.Value); break;
                     case 17: AddValuesToChart(tmp.Prop7.Temperatura117.Value, tmp.Prop7.Temperatura217.Value); break;                    
-                    case 19: AddValuesToChart(tmp.Prop8.Temperatura119.Value, null); break;
+                    case 19: AddValuesToChart(tmp.Prop8.Temperatura119.Value, tmp.Prop8.Temperatura219.Value); break;
                     default:
                         break;
                 }               
